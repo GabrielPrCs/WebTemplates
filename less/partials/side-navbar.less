@@ -16,7 +16,11 @@
   > * {
     .shadow-1;
     text-align: center;
-    top: 0;    left: 0;
+    top: 0; left: 0;
+  }
+
+  &.is-open {
+    left: 0;
   }
 
   /**
@@ -25,16 +29,18 @@
    */
   @media @small-phone, @phone, @tablet {
     width: @phone-width;
-    &.is-closed  { left: -@phone-width; }
+    left: -@phone-width;
   }
   @media @desktop {
     width: @desktop-width;
-    &.is-closed { left: -@desktop-width; }
+    left: -@desktop-width;
   }
   @media @wide-desktop {
     width: @wide-desktop-width;
-    &.is-closed { left: -@wide-desktop-width; }
+    left: -@wide-desktop-width;
   }
+
+
 
   > .side-navbar-header {
     height: @header-height;

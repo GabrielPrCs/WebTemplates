@@ -1,9 +1,9 @@
 .full-modal {
 
-  @effect: ease-in-out;  @attribute: top;  @time: .2s;  .add-transition();
+  @effect: ease-in-out;  @attribute: top;  @time: .3s;  .add-transition();
 
   position: fixed;
-  top: -90vh;
+  top: -100vh;
   left: 0;
   margin-left: 10vh;
   margin-right: 10vh;
@@ -11,15 +11,16 @@
   .shadow-2;
 
   > .modal-header {
-    min-height: 8vh;
-    max-height: 15vh;
+    min-height: 6vh;
+    max-height: 6vh;
+    padding: .4rem 1.5rem;
   }
 
   > .modal-body {
+    overflow: auto;
+    padding: .75rem 1.5rem;
     min-height: 70vh;
     max-height: 70vh;
-    padding: .75rem 1.5rem;
-    overflow: auto;
     text-align: justify;
   }
 
