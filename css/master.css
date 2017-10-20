@@ -1,6 +1,9 @@
 .shadow-1 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+.shadow-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
+}
 .card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   text-align: justify;
@@ -63,6 +66,10 @@
   background-color: #0099CC;
   color: white;
 }
+/**
+ * The different widths that the sidebar will take depending on the size of the
+ * screen where it is displayed.
+ */
 .side-navbar {
   -webkit-transition: left 0.1s ease-in-out;
   -moz-transition: left 0.1s ease-in-out;
@@ -72,6 +79,10 @@
   position: fixed;
   top: 0;
   left: 0;
+  /**
+   * Media queries for different screen sizes. When the bar is hidden,
+   * its position with respect to the left margin will be negative.
+   */
 }
 .side-navbar > * {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -170,4 +181,41 @@
     left: 25vw;
     width: 74vw;
   }
+}
+.full-modal {
+  -webkit-transition: top 0.2s ease-in-out;
+  -moz-transition: top 0.2s ease-in-out;
+  -o-transition: top 0.2s ease-in-out;
+  -ms-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
+  position: fixed;
+  top: -90vh;
+  left: 0;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
+}
+.full-modal > .modal-header {
+  min-height: 8vh;
+  max-height: 15vh;
+}
+.full-modal > .modal-body {
+  min-height: 70vh;
+  max-height: 70vh;
+  padding: .75rem 1.5rem;
+  overflow: auto;
+  text-align: justify;
+}
+.full-modal.is-open {
+  top: 5vh;
+}
+.full-modal.default > * {
+  color: white;
+}
+.full-modal.default > .modal-header {
+  background-color: #1C2331;
+}
+.full-modal.default > .modal-body {
+  color: black;
+  background-color: white;
 }
