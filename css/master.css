@@ -5,7 +5,72 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
 .opacity-effect {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.opacity-effect > .main-content {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+body {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+body > * {
+  line-height: 130%;
+  font-family: 'Roboto Mono', monospace;
+}
+.main-content {
+  margin: 5vh 5vw;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin: 50px 0px;
+}
+pre {
+  padding: 15px 25px;
+  max-height: 45vh;
+  overflow: auto;
+  height: auto;
+  background-color: #eceff1;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 2px;
+}
+pre::before {
+  content: 'Example code\a';
+  white-space: pre;
+  font-weight: bold;
+  font-size: 115%;
+}
+.default-button {
+  background-color: #4285F4;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding: 13px 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.default-button:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
+}
+.text-justify {
+  text-align: justify;
+}
+.text-center {
+  text-align: center;
+}
+.red-text {
+  color: #ff4444;
 }
 .card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -25,6 +90,10 @@
   background-color: #eceff1;
   color: black;
 }
+.card.default .card-body {
+  color: black;
+  background-color: white;
+}
 .card.default .card-footer {
   background-color: #546e7a;
   color: white;
@@ -32,6 +101,10 @@
 .card.primary .card-head {
   background-color: #4285F4;
   color: white;
+}
+.card.primary .card-body {
+  color: black;
+  background-color: white;
 }
 .card.primary .card-footer {
   background-color: #0d47a1;
@@ -41,6 +114,10 @@
   background-color: #ff4444;
   color: white;
 }
+.card.danger .card-body {
+  color: black;
+  background-color: white;
+}
 .card.danger .card-footer {
   background-color: #CC0000;
   color: white;
@@ -48,6 +125,10 @@
 .card.warning .card-head {
   background-color: #ffbb33;
   color: white;
+}
+.card.warning .card-body {
+  color: black;
+  background-color: white;
 }
 .card.warning .card-footer {
   background-color: #FF8800;
@@ -57,6 +138,10 @@
   background-color: #00C851;
   color: white;
 }
+.card.success .card-body {
+  color: black;
+  background-color: white;
+}
 .card.success .card-footer {
   background-color: #007E33;
   color: white;
@@ -64,6 +149,10 @@
 .card.info .card-head {
   background-color: #33b5e5;
   color: white;
+}
+.card.info .card-body {
+  color: black;
+  background-color: white;
 }
 .card.info .card-footer {
   background-color: #0099CC;
@@ -189,15 +278,14 @@
   -ms-transition: top 0.3s ease-in-out;
   transition: top 0.3s ease-in-out;
   position: fixed;
-  top: -100vh;
-  left: 0;
-  margin-left: 10vh;
-  margin-right: 10vh;
+  top: -200vh;
+  left: 5%;
+  width: 90%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
 .full-modal > .modal-header {
-  min-height: 6vh;
-  max-height: 6vh;
+  min-height: 5vh;
+  max-height: 5vh;
   padding: .4rem 1.5rem;
 }
 .full-modal > .modal-body {
@@ -219,4 +307,56 @@
 .full-modal.default > .modal-body {
   color: black;
   background-color: white;
+}
+.bottom-modal {
+  -webkit-transition: bottom 0.3s ease-in-out;
+  -moz-transition: bottom 0.3s ease-in-out;
+  -o-transition: bottom 0.3s ease-in-out;
+  -ms-transition: bottom 0.3s ease-in-out;
+  transition: bottom 0.3s ease-in-out;
+  position: fixed;
+  bottom: -200vh;
+  left: 0;
+  width: 100%;
+}
+.bottom-modal > .modal-body {
+  padding: 3.5%;
+  text-align: justify;
+  height: auto;
+}
+.bottom-modal > .modal-footer {
+  font-weight: bold;
+  padding: 1.5% 3.5%;
+  height: auto;
+}
+.bottom-modal.is-open {
+  bottom: 0;
+}
+.bottom-modal.default > .modal-body {
+  color: black;
+  background-color: white;
+}
+.bottom-modal.default > .modal-footer {
+  color: white;
+  background-color: #1C2331;
+}
+.full-modal-open {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.full-modal-open > .main-content {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+.bottom-modal-open {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.bottom-modal-open > .main-content {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
 }

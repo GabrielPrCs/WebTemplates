@@ -42,9 +42,83 @@
 }
 
 .opacity-effect {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.3);
+  > .main-content {
+      @blur: 3px;
+      -webkit-filter: blur(@blur);
+      -moz-filter: blur(@blur);
+      -o-filter: blur(@blur);
+      -ms-filter: blur(@blur);
+      filter: blur(@blur);
+  }
+}
+
+body {
+  > *{
+    line-height: 130%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  @effect: ease-in-out;  @attribute: background-color;  @time: .3s;  .add-transition();
+}
+
+.main-content {
+  margin: 5vh 5vw;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin: 50px 0px;
+}
+
+pre {
+  padding: 15px 25px;
+  max-height: 45vh;
+  overflow: auto;
+  height: auto;
+  background-color: #eceff1;
+  .shadow-1;
+  border-radius: 2px;
+}
+
+pre::before {
+  content: 'Example code\a';
+  white-space: pre;
+  font-weight: bold;
+  font-size: 115%;
+}
+
+.default-button {
+  background-color: @primary-color;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding: 13px 20px;
+  margin-bottom: 10px;
+
+  .shadow-1;
+
+  &:hover {
+    .shadow-2;
+  }
+
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.red-text {
+  color: @danger-color;
 }
 
 @import "partials/card.less";
 @import "partials/side-navbar.less";
-@import "partials/modal.less";
+@import "partials/modals.less";

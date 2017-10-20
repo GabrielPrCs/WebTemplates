@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/master.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <script src="https://use.fontawesome.com/69bb74e1fb.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+
+  <div class="main-content text-justify">
+
+
+    <h1 class="text-center">Modals</h1>
+
+    The Modal is a popup window which can be used for user notifications,
+    UI enhancements, e-commerce components and many other cases.
+
+    <h3>Layout</h3>
+
+    The Modal should be placed outside of the <b>&ltdiv class="<span class="red-text">main-content</span>"></b> so that the blur
+    effect on the background when the Modal is open works.
+
+    <pre>
+      <code>
+          &lt!DOCTYPE html>
+          &lthtml>
+            &lthead>
+              ...
+            &lt/head>
+            &ltbody>
+
+              &ltdiv class="<span class="red-text">main-content</span>">
+                ...
+              &lt/div>
+
+              &ltdiv class="<span class="red-text">modal</span>">
+                ...
+              &lt/div>
+
+            &lt/body>
+          &lt/html>
+      </code>
+    </pre>
+
+    <hr>
+
+
+    <h2>Full Modal</h2>
+
+    <p>A modal that appears from the top of the screen and is positioned approximately in the middle of the screen.
+       It is only possible to have one of these modals at a time.</p>
+
+    <button type="button" name="button" class="default-button full-modal-toggle-button">
+      Launch Demo
+    </button>
+
+    <pre>
+      <code>
+        &lt!-- The buttons that open / close the modal should have the class
+               .full-modal-toggle-button -->
+        &ltbutton type="button" name="button" class="<span class="red-text">full-modal-toggle-button</span>">
+          Open Full Modal
+        &lt/button>
+
+        &ltdiv class="<span class="red-text">full-modal default</span>">
+          &ltdiv class="<span class="red-text">modal-header</span>">
+            &lth1 class="<span class="red-text">modal-header-title</span>">The Title!&lt/h1>
+          &lt/div>
+
+          &ltdiv class="<span class="red-text">modal-body</span>">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            &ltbr>
+            &ltbutton type="button" name="button" class="<span class="red-text">full-modal-toggle-button</span>">
+            Close Full Modal
+            &lt/button>
+          &lt/div>
+        &lt/div>
+      </code>
+    </pre>
+
+
+
+    <br>
+    <h3>How to create a new theme</h3>
+
+    <pre>
+      <code>
+        .full-modal.theme > .modal-header {
+          background-color: #1C2331;
+          color: white;
+        }
+
+        .full-modal.theme > .modal-body {
+          background-color: white;
+          color: black;
+        }
+      </code>
+    </pre>
+
+    <hr>
+
+
+    <h2>Bottom Modal</h2>
+
+    <p>A Modal that appears from the bottom up on the screen. It is only possible to have one of these modals at a time.</p>
+
+    <button type="button" name="button" class="default-button bottom-modal-toggle-button">
+      Launch Demo
+    </button>
+
+    <pre>
+      <code>
+        &lt!-- The buttons that open / close the modal should have the class
+               .bottom-modal-toggle-button -->
+        &ltbutton type="button" name="button" class="<span class="red-text">bottom-modal-toggle-button</span>">
+          Open Bottom Modal
+        &lt/button>
+
+        &ltdiv class="<span class="red-text">bottom-modal default</span>">
+
+          &ltdiv class="<span class="red-text">modal-body</span>">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          &lt/div>
+
+          &ltdiv class="<span class="red-text">modal-footer</span>">
+            &ltbutton type="button" name="button" class="<span class="red-text">bottom-modal-toggle-button</span>">
+              Close Bottom Modal
+            &lt/button>
+          &lt/div>
+
+        &lt/div>
+      </code>
+    </pre>
+
+
+
+    <br>
+    <h3>How to create a new theme</h3>
+
+    <pre>
+      <code>
+        .bottom-modal.theme > .modal-body {
+          background-color: white;
+          color: black;
+        }
+
+        .bottom-modal.theme > .modal-footer {
+          background-color: black;
+          color: white;
+        }
+      </code>
+    </pre>
+
+
+
+  </div>
+
+  <div class="full-modal default">
+    <div class="modal-header">
+      <h1 class="modal-header-title">The Title!</h1>
+    </div>
+    <div class="modal-body">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.
+      <br>
+      <button type="button" name="button" class="default-button full-modal-toggle-button">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <div class="bottom-modal default">
+    <div class="modal-body">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.
+    </div>
+    <div class="modal-footer">
+      <button type="button" name="button" class="default-button bottom-modal-toggle-button">
+        Close
+      </button>
+    </div>
+  </div>
+
+</body>
+
+<script src="../js/modals.js"></script>
+<script src="../js/side-navbar.js"></script>
+
+</html>
