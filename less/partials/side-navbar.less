@@ -1,0 +1,108 @@
+/**
+ * The different widths that the sidebar will take depending on the size of the
+ * screen where it is displayed.
+ */
+@phone-width: 70vw;
+@desktop-width: 40vw;
+@wide-desktop-width: 25vw;
+
+.side-navbar {
+
+  @header-height: 8vh;  @body-height: 100vh - @header-height;
+  @effect: ease-in-out;  @attribute: left;  @time: .1s;  .add-transition();
+
+  position: fixed;  top: 0;  left: 0;
+
+  > * {
+    .shadow-1;
+    text-align: center;
+    top: 0;    left: 0;
+  }
+
+  /**
+   * Media queries for different screen sizes. When the bar is hidden,
+   * its position with respect to the left margin will be negative.
+   */
+  @media @small-phone, @phone, @tablet {
+    width: @phone-width;
+    &.is-closed  { left: -@phone-width; }
+  }
+  @media @desktop {
+    width: @desktop-width;
+    &.is-closed { left: -@desktop-width; }
+  }
+  @media @wide-desktop {
+    width: @wide-desktop-width;
+    &.is-closed { left: -@wide-desktop-width; }
+  }
+
+  > .side-navbar-header {
+    height: @header-height;
+    // All image inside the head of the bar has to take an appropriate size.
+    > img {
+      padding: 0.5%;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  > .side-navbar-body {
+    padding-top: .5rem;
+    height: @body-height;
+    overflow: auto;
+    > .items {
+      list-style-type: none;
+      > .item {
+        text-align: left;
+        font-weight: bold;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid white;
+        > .push-right {
+          float: right;
+        }
+      }
+      > .item:hover { cursor: pointer; }
+      > hr { margin: 1rem; }
+    }
+  }
+
+  // Combination of colors for the default theme of the bar
+  &.default {
+    > * {
+      background-color: @unique-color-alt;
+      color: white;
+    }
+    > .side-navbar-body > .items {
+      > .item:hover{
+        background-color: @unique-color;
+      }
+      > li {
+        background-color: @unique-color-alt;
+      }
+    }
+  }
+
+}
+
+// Sets the position of the main content of the page based on the status of the bar.
+.main-content.side-navbar-is-open {
+  overflow-y: hidden;
+  position: absolute;
+  @media @small-phone, @phone, @tablet {
+    left: @phone-width;
+    width: 100vw - @phone-width - 1vw;
+  }
+  @media @desktop {
+    left: @desktop-width;
+    width: 100vw - @desktop-width - 1vw;
+  }
+  @media @wide-desktop {
+    left: @wide-desktop-width;
+    width: 100vw - @wide-desktop-width - 1vw;
+  }
+}

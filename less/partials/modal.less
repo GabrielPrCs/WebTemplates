@@ -1,0 +1,45 @@
+.full-modal {
+
+  @effect: ease-in-out;  @attribute: top;  @time: .2s;  .add-transition();
+
+  position: fixed;
+  top: -90vh;
+  left: 0;
+  margin-left: 10vh;
+  margin-right: 10vh;
+
+  .shadow-2;
+
+  > .modal-header {
+    min-height: 8vh;
+    max-height: 15vh;
+  }
+
+  > .modal-body {
+    min-height: 70vh;
+    max-height: 70vh;
+    padding: .75rem 1.5rem;
+    overflow: auto;
+    text-align: justify;
+  }
+
+  &.is-open {
+    top: 5vh;
+  }
+
+  &.default {
+    > * {
+      color: white;
+    }
+
+    > .modal-header {
+      background-color: @unique-color-alt;
+    }
+
+    > .modal-body {
+      color: black;
+      background-color: white;
+    }
+  }
+
+}

@@ -1,0 +1,76 @@
+.themeColorsCreator() {
+  .card-head {
+    background-color: @head-color;
+    color: @head-text-color;
+  }
+  .card-footer {
+    background-color: @footer-color;
+    color: @footer-text-color;
+  }
+}
+
+.card {
+  .shadow-1;
+  text-align: justify;
+
+  * {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .card-head {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .card-footer {
+    font-weight: bold;
+  }
+
+  &.default {
+    @head-color: @default-color;
+    @head-text-color: black;
+    @footer-color: @default-color-alt;
+    @footer-text-color: white;
+    .themeColorsCreator();
+  }
+
+  &.primary {
+    @head-color: @primary-color;
+    @head-text-color: white;
+    @footer-color: @primary-color-alt;
+    @footer-text-color: white;
+    .themeColorsCreator();
+  }
+
+  &.danger {
+    @head-color: @danger-color;
+    @head-text-color: white;
+    @footer-color: @danger-color-alt;
+    @footer-text-color: white;
+    .themeColorsCreator();
+  }
+
+  &.warning {
+    @head-color: @warning-color;
+    @head-text-color: white;
+    @footer-color: @warning-color-alt;
+    @footer-text-color: white;
+    .themeColorsCreator();
+  }
+
+  &.success {
+    @head-color: @success-color;
+    @head-text-color: white;
+    @footer-color: @success-color-alt;
+    @footer-text-color: white;
+    .themeColorsCreator();
+  }
+
+  &.info {
+    @head-color: @info-color;
+    @head-text-color: white;
+    @footer-color: @info-color-alt;
+    @footer-text-color: white;
+    .themeColorsCreator();
+  }
+}

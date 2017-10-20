@@ -191,8 +191,8 @@
   position: fixed;
   top: -90vh;
   left: 0;
-  margin-left: 1vh;
-  margin-right: 1vh;
+  margin-left: 10vh;
+  margin-right: 10vh;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
 .full-modal > .modal-header {
