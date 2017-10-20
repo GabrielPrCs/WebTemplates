@@ -1,0 +1,173 @@
+.shadow-1 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-align: justify;
+}
+.card * {
+  padding: 1.2rem 1.5rem;
+}
+.card .card-head {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.card .card-footer {
+  font-weight: bold;
+}
+.card.default .card-head {
+  background-color: #eceff1;
+  color: black;
+}
+.card.default .card-footer {
+  background-color: #546e7a;
+  color: white;
+}
+.card.primary .card-head {
+  background-color: #4285F4;
+  color: white;
+}
+.card.primary .card-footer {
+  background-color: #0d47a1;
+  color: white;
+}
+.card.danger .card-head {
+  background-color: #ff4444;
+  color: white;
+}
+.card.danger .card-footer {
+  background-color: #CC0000;
+  color: white;
+}
+.card.warning .card-head {
+  background-color: #ffbb33;
+  color: white;
+}
+.card.warning .card-footer {
+  background-color: #FF8800;
+  color: white;
+}
+.card.success .card-head {
+  background-color: #00C851;
+  color: white;
+}
+.card.success .card-footer {
+  background-color: #007E33;
+  color: white;
+}
+.card.info .card-head {
+  background-color: #33b5e5;
+  color: white;
+}
+.card.info .card-footer {
+  background-color: #0099CC;
+  color: white;
+}
+.side-navbar {
+  -webkit-transition: left 0.1s ease-in-out;
+  -moz-transition: left 0.1s ease-in-out;
+  -o-transition: left 0.1s ease-in-out;
+  -ms-transition: left 0.1s ease-in-out;
+  transition: left 0.1s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.side-navbar > * {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+@media only screen and (min-width : 320px), only screen and (min-width : 480px), only screen and (min-width : 768px) {
+  .side-navbar {
+    width: 70vw;
+  }
+  .side-navbar.is-closed {
+    left: -70vw;
+  }
+}
+@media only screen and (min-width : 992px) {
+  .side-navbar {
+    width: 40vw;
+  }
+  .side-navbar.is-closed {
+    left: -40vw;
+  }
+}
+@media only screen and (min-width : 1200px) {
+  .side-navbar {
+    width: 25vw;
+  }
+  .side-navbar.is-closed {
+    left: -25vw;
+  }
+}
+.side-navbar > .side-navbar-header {
+  height: 8vh;
+}
+.side-navbar > .side-navbar-header > img {
+  padding: 0.5%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.side-navbar > .side-navbar-body {
+  padding-top: .5rem;
+  height: 92vh;
+  overflow: auto;
+}
+.side-navbar > .side-navbar-body > .items {
+  list-style-type: none;
+}
+.side-navbar > .side-navbar-body > .items > .item {
+  text-align: left;
+  font-weight: bold;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid white;
+}
+.side-navbar > .side-navbar-body > .items > .item > .push-right {
+  float: right;
+}
+.side-navbar > .side-navbar-body > .items > .item:hover {
+  cursor: pointer;
+}
+.side-navbar > .side-navbar-body > .items > hr {
+  margin: 1rem;
+}
+.side-navbar.default > * {
+  background-color: #1C2331;
+  color: white;
+}
+.side-navbar.default > .side-navbar-body > .items > .item:hover {
+  background-color: #3F729B;
+}
+.side-navbar.default > .side-navbar-body > .items > li {
+  background-color: #1C2331;
+}
+.main-content.side-navbar-is-open {
+  overflow-y: hidden;
+  position: absolute;
+}
+@media only screen and (min-width : 320px), only screen and (min-width : 480px), only screen and (min-width : 768px) {
+  .main-content.side-navbar-is-open {
+    left: 70vw;
+    width: 29vw;
+  }
+}
+@media only screen and (min-width : 992px) {
+  .main-content.side-navbar-is-open {
+    left: 40vw;
+    width: 59vw;
+  }
+}
+@media only screen and (min-width : 1200px) {
+  .main-content.side-navbar-is-open {
+    left: 25vw;
+    width: 74vw;
+  }
+}
