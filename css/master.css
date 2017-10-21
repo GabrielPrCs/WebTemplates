@@ -237,9 +237,6 @@ pre::before {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid white;
 }
-.side-navbar > .side-navbar-body > .items > .item > .push-right {
-  float: right;
-}
 .side-navbar > .side-navbar-body > .items > .item:hover {
   cursor: pointer;
 }
