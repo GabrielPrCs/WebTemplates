@@ -363,3 +363,7 @@ pre::before {
   -ms-filter: blur(5px);
   filter: blur(5px);
 }
+.full-modal-open .main-content,
+.bottom-modal-open .main-content {
+  pointer-events: none;
+}

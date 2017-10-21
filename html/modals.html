@@ -2,13 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Modals</title>
   <link rel="stylesheet" href="../css/master.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <script src="https://use.fontawesome.com/69bb74e1fb.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
@@ -16,15 +13,10 @@
   <div class="main-content text-justify">
 
     <h1 class="text-center">Modals</h1>
-
-    The Modal is a popup window which can be used for user notifications,
-    UI enhancements, e-commerce components and many other cases.
+    The Modal is a popup window which can be used for user notifications, UI enhancements, e-commerce components and many other cases.
 
     <h3>Layout</h3>
-
-    The Modal should be placed outside of the <b>&ltdiv class="<span class="red-text">main-content</span>"></b> so that the blur
-    effect on the background when the Modal is open works.
-
+    The Modal should be placed outside of the <b>&ltdiv class="<span class="red-text">main-content</span>"></b> so that the blur effect on the background when the Modal is open works.
     <pre>
       <code>
           &lt!DOCTYPE html>
@@ -48,43 +40,32 @@
     </pre>
 
     <h3>Files</h3>
-
     The styles and the functionalities can be found on:
-
     <ul>
       <li><b>JavaScript</b>: modals.js</li>
       <li><b>CSS</b>: modals.css</li>
     </ul>
 
     <h3>Themes</h3>
-
-    The only theme available (for now) is the <span class="blue-text">default</span> theme. However,
-    the following sections explain how you can create new themes.
-
+    The only theme available (for now) is the <span class="blue-text">default</span> theme. However, the following sections explain how you can create new themes.
 
     <hr>
 
-
     <h2>Full Modal</h2>
-
-    <p>A modal that appears from the top of the screen and is positioned approximately in the middle of the screen.
-       It is only possible to have one of these modals at a time.</p>
-
-    <button type="button" name="button" class="default-button full-modal-toggle-button">
+    <p>A modal that appears from the top of the screen and is positioned approximately in the middle of the screen.</p>
+    <button type="button" name="button" class="default-button full-modal-toggle-button" data-target="#full-modal-example">
       Launch Demo
     </button>
-
     <pre>
       <code>
         <span class="blue-text nowrap">
-        &lt!-- The buttons that open / close the modal should have the class
-               .full-modal-toggle-button -->
+        &lt!-- The buttons that open / close the modal should have the class .full-modal-toggle-button and the data-target with the id of the modal to toggle -->
         </span>
-        &ltbutton type="button" name="button" class="<span class="red-text">full-modal-toggle-button</span>">
+        &ltbutton type="button" name="button" class="<span class="red-text">full-modal-toggle-button</span>" data-target="<span class="red-text">#full-modal-example</span>">
           Open Full Modal
         &lt/button>
 
-        &ltdiv class="<span class="red-text">full-modal default</span>">
+        &ltdiv id="full-modal-example" class="<span class="red-text">full-modal default</span>">
           &ltdiv class="<span class="red-text">modal-header</span>">
             &lth1>The Title!&lt/h1>
           &lt/div>
@@ -93,7 +74,7 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             &ltbr>
-            &ltbutton type="button" name="button" class="<span class="red-text">full-modal-toggle-button</span>">
+            &ltbutton type="button" name="button" class="<span class="red-text">default-button full-modal-toggle-button</span>" data-target="<span class="red-text">#full-modal-example</span>">
             Close Full Modal
             &lt/button>
           &lt/div>
@@ -101,11 +82,9 @@
       </code>
     </pre>
 
-
-
     <br>
-    <h3>How to create a new theme</h3>
 
+    <h3>How to create a new theme</h3>
     <pre>
       <code>
         .full-modal.theme > .modal-header {
@@ -122,26 +101,21 @@
 
     <hr>
 
-
     <h2>Bottom Modal</h2>
-
     <p>A Modal that appears from the bottom up on the screen. It is only possible to have one of these modals at a time.</p>
-
-    <button type="button" name="button" class="default-button bottom-modal-toggle-button">
+    <button type="button" name="button" class="default-button bottom-modal-toggle-button" data-target="#bottom-modal-example">
       Launch Demo
     </button>
-
     <pre>
       <code>
         <span class="blue-text nowrap">
-        &lt!-- The buttons that open / close the modal should have the class
-        .bottom-modal-toggle-button -->
+        &lt!-- The buttons that open / close the modal should have the class .bottom-modal-toggle-button and the data-target with the id of the modal to toggle -->
         </span>
-        &ltbutton type="button" name="button" class="<span class="red-text">bottom-modal-toggle-button</span>">
+        &ltbutton type="button" name="button" class="<span class="red-text">bottom-modal-toggle-button</span>" data-target="<span class="red-text">#bottom-modal-example</span>">
           Open Bottom Modal
         &lt/button>
 
-        &ltdiv class="<span class="red-text">bottom-modal default</span>">
+        &ltdiv id="bottom-modal-example" class="<span class="red-text">bottom-modal default</span>">
 
           &ltdiv class="<span class="red-text">modal-body</span>">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -149,7 +123,7 @@
           &lt/div>
 
           &ltdiv class="<span class="red-text">modal-footer</span>">
-            &ltbutton type="button" name="button" class="<span class="red-text">bottom-modal-toggle-button</span>">
+            &ltbutton type="button" name="button" class="<span class="red-text">default-button bottom-modal-toggle-button</span>" data-target="<span class="red-text">#bottom-modal-example</span>">
               Close Bottom Modal
             &lt/button>
           &lt/div>
@@ -158,11 +132,9 @@
       </code>
     </pre>
 
-
-
     <br>
-    <h3>How to create a new theme</h3>
 
+    <h3>How to create a new theme</h3>
     <pre>
       <code>
         .bottom-modal.theme > .modal-body {
@@ -177,11 +149,9 @@
       </code>
     </pre>
 
-
-
   </div>
 
-  <div class="full-modal default">
+  <div id="full-modal-example" class="full-modal default">
     <div class="modal-header">
       <h1>The Title!</h1>
     </div>
@@ -201,13 +171,13 @@
       sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
       mollit anim id est laborum.
       <br>
-      <button type="button" name="button" class="default-button full-modal-toggle-button">
+      <button type="button" name="button" class="default-button full-modal-toggle-button" data-target="#full-modal-example">
         Close
       </button>
     </div>
   </div>
 
-  <div class="bottom-modal default">
+  <div id="bottom-modal-example" class="bottom-modal default">
     <div class="modal-body">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -225,7 +195,7 @@
       mollit anim id est laborum.
     </div>
     <div class="modal-footer">
-      <button type="button" name="button" class="default-button bottom-modal-toggle-button">
+      <button type="button" name="button" class="default-button bottom-modal-toggle-button" data-target="#bottom-modal-example">
         Close
       </button>
     </div>
