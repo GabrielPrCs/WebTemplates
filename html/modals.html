@@ -15,7 +15,6 @@
 
   <div class="main-content text-justify">
 
-
     <h1 class="text-center">Modals</h1>
 
     The Modal is a popup window which can be used for user notifications,
@@ -48,6 +47,21 @@
       </code>
     </pre>
 
+    <h3>Files</h3>
+
+    The styles and the functionalities can be found on:
+
+    <ul>
+      <li><b>JavaScript</b>: modals.js</li>
+      <li><b>CSS</b>: modals.css</li>
+    </ul>
+
+    <h3>Themes</h3>
+
+    The only theme available (for now) is the <span class="blue-text">default</span> theme. However,
+    the following sections explain how you can create new themes.
+
+
     <hr>
 
 
@@ -62,15 +76,17 @@
 
     <pre>
       <code>
+        <span class="blue-text nowrap">
         &lt!-- The buttons that open / close the modal should have the class
                .full-modal-toggle-button -->
+        </span>
         &ltbutton type="button" name="button" class="<span class="red-text">full-modal-toggle-button</span>">
           Open Full Modal
         &lt/button>
 
         &ltdiv class="<span class="red-text">full-modal default</span>">
           &ltdiv class="<span class="red-text">modal-header</span>">
-            &lth1 class="<span class="red-text">modal-header-title</span>">The Title!&lt/h1>
+            &lth1>The Title!&lt/h1>
           &lt/div>
 
           &ltdiv class="<span class="red-text">modal-body</span>">
@@ -117,8 +133,10 @@
 
     <pre>
       <code>
+        <span class="blue-text nowrap">
         &lt!-- The buttons that open / close the modal should have the class
-               .bottom-modal-toggle-button -->
+        .bottom-modal-toggle-button -->
+        </span>
         &ltbutton type="button" name="button" class="<span class="red-text">bottom-modal-toggle-button</span>">
           Open Bottom Modal
         &lt/button>
@@ -165,7 +183,7 @@
 
   <div class="full-modal default">
     <div class="modal-header">
-      <h1 class="modal-header-title">The Title!</h1>
+      <h1>The Title!</h1>
     </div>
     <div class="modal-body">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit,

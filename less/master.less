@@ -42,9 +42,9 @@
 }
 
 .opacity-effect {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.45);
   > .main-content {
-      @blur: 3px;
+      @blur: 5px;
       -webkit-filter: blur(@blur);
       -moz-filter: blur(@blur);
       -o-filter: blur(@blur);
@@ -91,6 +91,7 @@ pre::before {
 }
 
 .default-button {
+  cursor: pointer;
   background-color: @primary-color;
   color: white;
   text-transform: uppercase;
@@ -117,6 +118,14 @@ pre::before {
 
 .red-text {
   color: @danger-color;
+}
+
+.blue-text {
+  color: @primary-color-alt;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 @import "partials/card.less";

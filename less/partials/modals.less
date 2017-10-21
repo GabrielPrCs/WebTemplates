@@ -10,15 +10,10 @@
   .shadow-2;
 
   > .modal-header {
-    @height: 5vh;
-    min-height: @height;
-    max-height: @height;
+    max-height: 10vh;
+    height: auto;
     padding: .4rem 1.5rem;
-
-    > .modal-header-title {
-
-    }
-
+    overflow: auto;
   }
 
   > .modal-body {
@@ -62,7 +57,7 @@
   > .modal-body {
     padding: 3.5%;
     text-align: justify;
-    height: 20vh;
+    height: 35vh;
   }
 
   > .modal-footer {
@@ -94,10 +89,6 @@
 
 }
 
-.full-modal-open {
-  .opacity-effect;
-}
-
-.bottom-modal-open {
+.full-modal-open, .bottom-modal-open {
   .opacity-effect;
 }

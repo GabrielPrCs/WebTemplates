@@ -5,14 +5,14 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
 .opacity-effect {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.45);
 }
 .opacity-effect > .main-content {
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 body {
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -51,6 +51,7 @@ pre::before {
   font-size: 115%;
 }
 .default-button {
+  cursor: pointer;
   background-color: #4285F4;
   color: white;
   text-transform: uppercase;
@@ -71,6 +72,12 @@ pre::before {
 }
 .red-text {
   color: #ff4444;
+}
+.blue-text {
+  color: #0d47a1;
+}
+.nowrap {
+  white-space: nowrap;
 }
 .card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -284,9 +291,10 @@ pre::before {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
 .full-modal > .modal-header {
-  min-height: 5vh;
-  max-height: 5vh;
+  max-height: 10vh;
+  height: auto;
   padding: .4rem 1.5rem;
+  overflow: auto;
 }
 .full-modal > .modal-body {
   overflow: auto;
@@ -322,7 +330,7 @@ pre::before {
 .bottom-modal > .modal-body {
   padding: 3.5%;
   text-align: justify;
-  height: 20vh;
+  height: 35vh;
 }
 .bottom-modal > .modal-footer {
   height: 10vh;
@@ -343,23 +351,15 @@ pre::before {
   color: white;
   background-color: #1C2331;
 }
-.full-modal-open {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.full-modal-open > .main-content {
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
-}
+.full-modal-open,
 .bottom-modal-open {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.45);
 }
+.full-modal-open > .main-content,
 .bottom-modal-open > .main-content {
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
