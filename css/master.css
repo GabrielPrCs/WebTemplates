@@ -381,16 +381,20 @@ body.side-navbar-is-open.side-navbar-overlapping {
   transition: 1s;
 }
 .tabs > .tabs-body {
+  position: relative;
   border: 1px solid whitesmoke;
-  padding: .3rem 1rem;
   padding-bottom: 1.5rem;
-  min-height: 10vh;
 }
 .tabs > .tabs-body > .tab {
-  display: none;
+  padding: .3rem 1rem;
+  padding-bottom: 1.5rem;
+  position: absolute;
+  top: 0;
+  transform: scale(0);
+  transition: transform 0.2s cubic-bezier(0.5, 0, 0.3, 1);
 }
 .tabs > .tabs-body > .tab.tab-active {
-  display: block;
+  transform: scale(1);
 }
 .tabs.default > .tabs-links {
   background-color: #1C2331;

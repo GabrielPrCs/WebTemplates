@@ -16,16 +16,19 @@
   }
 
   > .tabs-body {
+    position: relative;
     border: 1px solid whitesmoke;
-    padding: .3rem 1rem;
     padding-bottom: 1.5rem;
-    min-height: 10vh;
 
     > .tab {
-      display: none;
-
+      padding: .3rem 1rem;
+      padding-bottom: 1.5rem;
+      position: absolute;
+      top: 0;
+      transform: scale(0);
+      transition: transform .2s cubic-bezier(.5,0,.3,1);
       &.tab-active {
-        display: block;
+        transform: scale(1);
       }
     }
 
