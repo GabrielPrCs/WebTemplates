@@ -1,7 +1,3 @@
-/**
- * The different widths that the sidebar will take depending on the size of the
- * screen where it is displayed.
- */
 @phone-width: 70vw;
 @desktop-width: 40vw;
 @wide-desktop-width: 25vw;
@@ -11,22 +7,8 @@
   @header-height: 8vh;  @body-height: 100vh - @header-height;
   @effect: ease-in-out;  @attribute: left;  @time: .1s;  .add-transition();
 
-  position: fixed;  top: 0;  left: 0;
+  position: fixed;  top: 0;
 
-  > * {
-    .shadow-1;
-    text-align: center;
-    top: 0; left: 0;
-  }
-
-  &.is-open {
-    left: 0;
-  }
-
-  /**
-   * Media queries for different screen sizes. When the bar is hidden,
-   * its position with respect to the left margin will be negative.
-   */
   @media @small-phone, @phone, @tablet {
     width: @phone-width;
     left: -@phone-width;
@@ -41,8 +23,15 @@
   }
 
 
+  .shadow-1;
+
+
+  &.is-open {
+    left: 0;
+  }
 
   > .side-navbar-header {
+    text-align: center;
     height: @header-height;
     // All image inside the head of the bar has to take an appropriate size.
     > img {
@@ -55,7 +44,6 @@
   }
 
   > .side-navbar-body {
-    padding-top: .5rem;
     height: @body-height;
     overflow: auto;
     > .items {
@@ -93,19 +81,26 @@
 }
 
 // Sets the position of the main content of the page based on the status of the bar.
-.main-content.side-navbar-is-open {
-  overflow-y: hidden;
+body.side-navbar-is-open {
   position: absolute;
+  width: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
   @media @small-phone, @phone, @tablet {
     left: @phone-width;
-    width: 100vw - @phone-width - 1vw;
   }
   @media @desktop {
     left: @desktop-width;
-    width: 100vw - @desktop-width - 1vw;
   }
   @media @wide-desktop {
     left: @wide-desktop-width;
-    width: 100vw - @wide-desktop-width - 1vw;
   }
+  .opacity-effect;
+}
+
+body.side-navbar-is-open.side-navbar-overlapping {
+  overflow-y: hidden;
+  position: absolute;
+  left: 0;
+  width: auto;
 }

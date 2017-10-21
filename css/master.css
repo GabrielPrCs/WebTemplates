@@ -25,9 +25,6 @@ body > * {
   line-height: 130%;
   font-family: 'Roboto Mono', monospace;
 }
-.main-content {
-  margin: 5vh 5vw;
-}
 hr {
   border: 0;
   height: 1px;
@@ -78,6 +75,13 @@ pre::before {
 }
 .nowrap {
   white-space: nowrap;
+}
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  margin: 1vh 5vw;
 }
 .card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -165,10 +169,6 @@ pre::before {
   background-color: #0099CC;
   color: white;
 }
-/**
- * The different widths that the sidebar will take depending on the size of the
- * screen where it is displayed.
- */
 .side-navbar {
   -webkit-transition: left 0.1s ease-in-out;
   -moz-transition: left 0.1s ease-in-out;
@@ -177,20 +177,7 @@ pre::before {
   transition: left 0.1s ease-in-out;
   position: fixed;
   top: 0;
-  left: 0;
-  /**
-   * Media queries for different screen sizes. When the bar is hidden,
-   * its position with respect to the left margin will be negative.
-   */
-}
-.side-navbar > * {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  text-align: center;
-  top: 0;
-  left: 0;
-}
-.side-navbar.is-open {
-  left: 0;
 }
 @media only screen and (min-width : 320px), only screen and (min-width : 480px), only screen and (min-width : 768px) {
   .side-navbar {
@@ -210,7 +197,11 @@ pre::before {
     left: -25vw;
   }
 }
+.side-navbar.is-open {
+  left: 0;
+}
 .side-navbar > .side-navbar-header {
+  text-align: center;
   height: 8vh;
 }
 .side-navbar > .side-navbar-header > img {
@@ -221,7 +212,6 @@ pre::before {
   height: auto;
 }
 .side-navbar > .side-navbar-body {
-  padding-top: .5rem;
   height: 92vh;
   overflow: auto;
 }
@@ -253,27 +243,40 @@ pre::before {
 .side-navbar.default > .side-navbar-body > .items > li {
   background-color: #1C2331;
 }
-.main-content.side-navbar-is-open {
-  overflow-y: hidden;
+body.side-navbar-is-open {
   position: absolute;
+  width: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.45);
 }
 @media only screen and (min-width : 320px), only screen and (min-width : 480px), only screen and (min-width : 768px) {
-  .main-content.side-navbar-is-open {
+  body.side-navbar-is-open {
     left: 70vw;
-    width: 29vw;
   }
 }
 @media only screen and (min-width : 992px) {
-  .main-content.side-navbar-is-open {
+  body.side-navbar-is-open {
     left: 40vw;
-    width: 59vw;
   }
 }
 @media only screen and (min-width : 1200px) {
-  .main-content.side-navbar-is-open {
+  body.side-navbar-is-open {
     left: 25vw;
-    width: 74vw;
   }
+}
+body.side-navbar-is-open > .main-content {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+body.side-navbar-is-open.side-navbar-overlapping {
+  overflow-y: hidden;
+  position: absolute;
+  left: 0;
+  width: auto;
 }
 .full-modal {
   -webkit-transition: top 0.3s ease-in-out;
@@ -359,8 +362,4 @@ pre::before {
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
-}
-.full-modal-open .main-content,
-.bottom-modal-open .main-content {
-  pointer-events: none;
 }

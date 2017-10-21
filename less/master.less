@@ -61,10 +61,6 @@ body {
   @effect: ease-in-out;  @attribute: background-color;  @time: .3s;  .add-transition();
 }
 
-.main-content {
-  margin: 5vh 5vw;
-}
-
 hr {
   border: 0;
   height: 1px;
@@ -126,6 +122,14 @@ pre::before {
 
 .nowrap {
   white-space: nowrap;
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  margin: 1vh 5vw;
 }
 
 @import "partials/card.less";

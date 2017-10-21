@@ -11,6 +11,156 @@
 </head>
 <body>
 
+
+
+  <div class="main-content text-justify">
+
+    <h1 class="text-center">Side Navigation Bar</h1>
+    Bar that appears from the left side of the screen, in which you can place "items" to use as navigation within the page.
+
+    <h3>Layout</h3>
+    The side navigation bar should be placed after the <b>&ltdiv class="<span class="red-text">main-content</span>"></b> and be a direct child of the body tag so that the effects and functions works.
+    <pre>
+      <code>
+          &lt!DOCTYPE html>
+          &lthtml>
+            &lthead>
+              ...
+            &lt/head>
+            &ltbody>
+
+              &ltdiv class="<span class="red-text">main-content</span>">
+                ...
+              &lt/div>
+
+              &ltdiv class="<span class="red-text">side-navbar</span>">
+                ...
+              &lt/div>
+
+            &lt/body>
+          &lt/html>
+      </code>
+    </pre>
+
+    <h3>Files</h3>
+    The styles and the functionalities can be found on:
+    <ul>
+      <li><b>JavaScript</b>: side-navbar.js</li>
+      <li><b>CSS</b>: side-navbar.css</li>
+    </ul>
+
+    <h3>Themes</h3>
+    The only theme available (for now) is the <span class="blue-text">default</span> theme. However, the following sections explain how you can create new themes.
+
+    <h3>Extra consideration</h3>
+    It is only possible to have a <b class="red-text">single</b> sidebar; if more than one is added, only the last one will be visible (the last will be the one that is below in the document).
+
+    <hr>
+
+    <h3>Plane side navbar</h3>
+
+    <button class="default-button side-navbar-toggle-button">
+      Launch Demo
+    </button>
+
+    <pre>
+      <code>
+        &lt!--  This example uses icons from <a href="http://fontawesome.io/icons/">fontawesome</a> -->
+
+        &lt!-- The buttons that open / close the sidebar should have the class .sidebar-toggle-button -->
+        &ltbutton class="<span class="red-text">default-button side-navbar-toggle-button</span>">
+          Toggle Side navbar
+        &lt/button>
+
+        &ltdiv class="<span class="red-text">side-navbar default</span>">
+
+          &ltdiv class="<span class="red-text">side-navbar-header</span>">
+            &ltimg src="some_link">
+          &lt/div>
+
+          &ltdiv class="<span class="red-text">side-navbar-body</span>">
+
+            &ltul class="<span class="red-text">items</span>">
+
+              &ltli class="<span class="red-text">item</span>">
+                &lti class="fa fa-umbrella" aria-hidden="true">&lt/i>
+                This is an item with an icon at his left
+              &lt/li>
+
+              &ltli class="<span class="red-text">item</span>">
+                This is an item with an icon at his right
+                &lti class="fa fa-umbrella" aria-hidden="true">&lt/i>
+              &lt/li>
+
+              ...
+
+            &lt/ul>
+
+          &lt/div>
+
+        &lt/div>
+      </code>
+    </pre>
+
+    <hr>
+
+    <h3>Extra features</h3>
+
+    <b>Overlapping</b>: the sidebar will be placed over the content in main-content, instead of moving it to the left.
+    <pre>
+      <code>
+        &ltdiv class="side-navbar default <span class="red-text">overlapping</span>">
+          ...
+        &lt/div>
+      </code>
+    </pre>
+
+    <b>Close on click</b>: closes the sidebar when a item inside is clicked.
+    <pre>
+      <code>
+        &ltdiv class="side-navbar default">
+
+          &ltdiv class="side-navbar-header">
+            ...
+          &lt/div>
+
+          &ltdiv class="side-navbar-body">
+
+            &ltul class="items <span class="red-text">items-close-after-click</span>">
+              ...
+            &lt/ul>
+
+          &lt/div>
+
+        &lt/div>
+      </code>
+    </pre>
+
+    <hr>
+
+    <h3>How to create a new theme</h3>
+    <pre>
+      <code>
+        &lt!-- Background color for the whole bar -->
+        .side-navbar.default > * {
+          background-color: #1C2331;
+          color: white;
+        }
+
+        &lt!-- Background color for the part that is not covered by the upper class -->
+        .side-navbar.default > .side-navbar-body > .items > li {
+          background-color: #1C2331;
+        }
+
+        &lt!-- Color for the items when they are hover -->
+        .side-navbar.default > .side-navbar-body > .items > .item:hover {
+          background-color: #3F729B;
+        }
+      </code>
+    </pre>
+
+  </div>
+
   <div class="side-navbar default">
 
     <div class="side-navbar-header">
@@ -40,118 +190,6 @@
     </div>
 
   </div>
-
-  <div class="main-content text-justify">
-
-    <h1 class="text-center">Side Navigation Bar</h1>
-
-    <h3>Layout</h3>
-    The side navigation bar should be placed before the <b>&ltdiv class="<span class="red-text">main-content</span>"></b> so that the effects and functions works.
-    In addition, this will cause the bar to be placed above the main content and allow its correct visualization.
-    <pre>
-      <code>
-          &lt!DOCTYPE html>
-          &lthtml>
-            &lthead>
-              ...
-            &lt/head>
-            &ltbody>
-
-              &ltdiv class="<span class="red-text">side-navbar</span>">
-                ...
-              &lt/div>
-
-              &ltdiv class="<span class="red-text">main-content</span>">
-                ...
-              &lt/div>
-
-            &lt/body>
-          &lt/html>
-      </code>
-    </pre>
-
-    <h3>Files</h3>
-    The styles and the functionalities can be found on:
-    <ul>
-      <li><b>JavaScript</b>: side-navbar.js</li>
-      <li><b>CSS</b>: side-navbar.css</li>
-    </ul>
-
-    <h3>Themes</h3>
-    The only theme available (for now) is the <span class="blue-text">default</span> theme. However, the following sections explain how you can create new themes.
-
-    <hr>
-
-    <h3>Basic side nabvar</h3>
-
-    <button class="default-button side-navbar-toggle">
-      Launch Demo
-    </button>
-
-    <pre>
-      <code>
-        &lt!--  This example uses icons from fontawesome -->
-
-        &lt!-- The buttons that open / close the sidebar should have the class .sidebar-toggle-button and the data-target with the id of the sidebar to toggle -->
-        &ltbutton class="<span class="red-text">default-button sidebar-toggle-button</span>" data-target="<span class="blue-text">#side-example</span>">
-          Toggle Side navbar
-        &lt/button>
-
-        &ltdiv id="<span class="blue-text">side-example</span>" class="<span class="red-text">side-navbar default</span>">
-
-          &ltdiv class="<span class="red-text">side-navbar-header</span>">
-            &ltimg src="some_link">
-          &lt/div>
-
-          &ltdiv class="<span class="red-text">side-navbar-body</span>">
-
-            &ltul class="<span class="red-text">items items-close-after-click</span>">
-
-              &ltli class="<span class="red-text">item</span>">
-                &lti class="fa fa-umbrella" aria-hidden="true"></i>
-                This is an item with an icon at his left
-              &lt/li>
-
-              &ltli class="<span class="red-text">item</span>">
-                This is an item with an icon at his right
-                &lti class="fa fa-umbrella" aria-hidden="true"></i>
-              &lt/li>
-
-              ...
-
-            &lt/ul>
-
-          &lt/div>
-
-        &lt/div>
-      </code>
-    </pre>
-
-    <h3>Extra features</h3>
-
-    <b>Permanent open</b>: keeps the sidebar always open, and prevents it from being closed. <u>Should not be used in conjunction with overlapping class.</u>
-    <pre>
-      <code>
-        &ltdiv class="side-navbar default is-permanent">
-          ...
-        &lt/div>
-      </code>
-    </pre>
-
-    <br>
-
-    <b>Overlapping</b>: the sidebar will be placed over the content in main-content, instead of moving it to the left. <u>Should not be used in conjunction with is-permanent class.</u>
-    <pre>
-      <code>
-        &ltdiv class="side-navbar default overlapping">
-          ...
-        &lt/div>
-      </code>
-    </pre>
-
-  </div>
-
-
 
 
 </body>
