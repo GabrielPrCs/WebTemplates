@@ -1,0 +1,94 @@
+.full-modal {
+
+  @effect: ease-in-out;  @attribute: top;  @time: .3s;  .add-transition();
+
+  position: fixed;
+  top: -200vh;
+  left: 5%;
+  width: 90%;
+
+  .shadow-2;
+
+  > .modal-header {
+    max-height: 10vh;
+    height: auto;
+    padding: .4rem 1.5rem;
+    overflow: auto;
+  }
+
+  > .modal-body {
+    overflow: auto;
+    padding: .75rem 1.5rem;
+    min-height: 70vh;
+    max-height: 70vh;
+    text-align: justify;
+  }
+
+  &.is-open {
+    top: 5vh;
+  }
+
+  &.default {
+    > * {
+      color: white;
+    }
+
+    > .modal-header {
+      background-color: @unique-color-alt;
+    }
+
+    > .modal-body {
+      color: black;
+      background-color: white;
+    }
+  }
+
+}
+
+.bottom-modal {
+
+  @effect: ease-in-out;  @attribute: bottom;  @time: .3s;  .add-transition();
+
+  position: fixed;
+  bottom: -200vh;
+  left: 0;
+  width: 100%;
+
+  > .modal-body {
+    padding: 3.5%;
+    text-align: justify;
+    height: 35vh;
+  }
+
+  > .modal-footer {
+    height: 10vh;
+    font-weight: bold;
+    padding: 1.5% 3.5%;
+  }
+
+  &.is-open {
+    bottom: 0px;
+
+    > * {
+      overflow: auto;
+    }
+
+  }
+
+  &.default {
+    > .modal-body {
+      color: black;
+      background-color: white;
+    }
+
+    > .modal-footer {
+      color: white;
+      background-color: @unique-color-alt;
+    }
+  }
+
+}
+
+.full-modal-open, .bottom-modal-open {
+  .opacity-effect;
+}
