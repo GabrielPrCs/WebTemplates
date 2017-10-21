@@ -322,15 +322,18 @@ pre::before {
 .bottom-modal > .modal-body {
   padding: 3.5%;
   text-align: justify;
-  height: auto;
+  height: 20vh;
 }
 .bottom-modal > .modal-footer {
+  height: 10vh;
   font-weight: bold;
   padding: 1.5% 3.5%;
-  height: auto;
 }
 .bottom-modal.is-open {
-  bottom: 0;
+  bottom: 0px;
+}
+.bottom-modal.is-open > * {
+  overflow: auto;
 }
 .bottom-modal.default > .modal-body {
   color: black;

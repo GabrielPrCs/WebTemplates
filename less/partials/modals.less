@@ -16,7 +16,7 @@
     padding: .4rem 1.5rem;
 
     > .modal-header-title {
-      
+
     }
 
   }
@@ -62,17 +62,22 @@
   > .modal-body {
     padding: 3.5%;
     text-align: justify;
-    height: auto;
+    height: 20vh;
   }
 
   > .modal-footer {
+    height: 10vh;
     font-weight: bold;
     padding: 1.5% 3.5%;
-    height: auto;
   }
 
   &.is-open {
-    bottom: 0;
+    bottom: 0px;
+
+    > * {
+      overflow: auto;
+    }
+
   }
 
   &.default {
