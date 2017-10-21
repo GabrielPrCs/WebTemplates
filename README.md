@@ -10,3 +10,6 @@ The modal is a popup window which can be used for user notifications, UI enhance
 A modal that appears from the top of the screen and is positioned approximately in the middle of the screen.
 ### Bottom modal:
 A modal that appears from the bottom of the screen and is placed on the bottom margin.
+
+# Tabs
+Tabs are components which separate content placed in the same wrapper, but in the separate pane. Only one pane can be displayed at the time.
