@@ -57,8 +57,7 @@
     <hr>
 
     Each button associated with a tab must have the <span class="blue-text">.tabs-link</span> class and a <span class="blue-text">data-target</span> with the tab id to which it is associated.
-    The <span class="blue-text">.active</span> inside a button with the .tabs-link class indicates that this button is the current pressed button.
-    The <span class="blue-text">tab-active</span> inside a div with the .tab class indicates that this is the current opened tab.
+    The <span class="blue-text">.active</span> inside a button with the .tabs-link class indicates that the tab in the data-target is the current active tab.
 
     <h3>Standar Tab</h3>
     <div class="tabs default">
@@ -69,7 +68,7 @@
         <button type="button" name="button" class="tabs-link" data-target="#example-4">Item 4</button>
       </div>
       <div class="tabs-body">
-        <div id="example-1" class="tab tab-active">
+        <div id="example-1" class="tab">
           <h2>Example 1</h2>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -112,7 +111,7 @@
             &ltbutton type="button" name="button" class="<span class="red-text">tabs-link</span>" data-target="<span class="blue-text">#example-2</span>">Item 2&lt/button>
           &lt/div>
           &ltdiv class="<span class="red-text">tabs-body</span>">
-            &ltdiv id="<span class="blue-text">example-1</span>" class="<span class="red-text">tab tab-active</span>">
+            &ltdiv id="<span class="blue-text">example-1</span>" class="<span class="red-text">tab</span>">
               &lth2>Example 1&lt/h2>
             &lt/div>
             &ltdiv id="<span class="blue-text">example-2</span>" class="<span class="red-text">tab</span>">
@@ -129,7 +128,7 @@
     <h3>Alternative Tab</h3>
     <div class="tabs default">
       <div class="tabs-body">
-        <div id="example-5" class="tab tab-active">
+        <div id="example-5" class="tab">
           <h2>Example 5</h2>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -174,7 +173,7 @@
       <code>
         &ltdiv class="<span class="red-text">tabs default</span>">
           &ltdiv class="<span class="red-text">tabs-body</span>">
-            &ltdiv id="<span class="blue-text">example-5</span>" class="<span class="red-text">tab tab-active</span>">
+            &ltdiv id="<span class="blue-text">example-5</span>" class="<span class="red-text">tab</span>">
               &lth2>Example 5&lt/h2>
             &lt/div>
             &ltdiv id="<span class="blue-text">example-6</span>" class="<span class="red-text">tab</span>">

@@ -386,15 +386,20 @@ body.side-navbar-is-open.side-navbar-overlapping {
   padding-bottom: 1.5rem;
 }
 .tabs > .tabs-body > .tab {
-  padding: .3rem 1rem;
-  padding-bottom: 1.5rem;
   position: absolute;
   top: 0;
+  padding: .3rem 1.5rem;
   transform: scale(0);
-  transition: transform 0.2s cubic-bezier(0.5, 0, 0.3, 1);
+  visibility: hidden;
+  -webkit-transition: transform 0.15s ease-in-out;
+  -moz-transition: transform 0.15s ease-in-out;
+  -o-transition: transform 0.15s ease-in-out;
+  -ms-transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 }
 .tabs > .tabs-body > .tab.tab-active {
   transform: scale(1);
+  visibility: visible;
 }
 .tabs.default > .tabs-links {
   background-color: #1C2331;

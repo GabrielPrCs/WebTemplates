@@ -21,14 +21,17 @@
     padding-bottom: 1.5rem;
 
     > .tab {
-      padding: .3rem 1rem;
-      padding-bottom: 1.5rem;
+      // Since the position is absolute, it will be necessary to arrange the height of the .tabs-body (parent class) through js.
       position: absolute;
       top: 0;
+      padding: .3rem 1.5rem;
       transform: scale(0);
-      transition: transform .2s cubic-bezier(.5,0,.3,1);
+      visibility: hidden;
+      @effect: ease-in-out;  @attribute: visibility;  @time: .15s;  .add-transition();
+      @effect: ease-in-out;  @attribute: transform;  @time: .15s;  .add-transition();
       &.tab-active {
         transform: scale(1);
+        visibility: visible;
       }
     }
 
