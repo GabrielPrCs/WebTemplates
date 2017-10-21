@@ -237,7 +237,8 @@ pre::before {
   background-color: #1C2331;
   color: white;
 }
-.side-navbar.default > .side-navbar-body > .items > .item:hover {
+.side-navbar.default > .side-navbar-body > .items > .item:hover,
+.side-navbar.default > .side-navbar-body > .items .active {
   background-color: #3F729B;
 }
 .side-navbar.default > .side-navbar-body > .items > li {
