@@ -1,0 +1,54 @@
+.tabs {
+  margin: 1.5rem 0;
+  width: 100%;
+  .shadow-1;
+
+  > .tabs-links {
+    padding: .5rem 1rem;
+    > button.tabs-link {
+      font-weight: bold;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 1s;
+    }
+  }
+
+  > .tabs-body {
+    border: 1px solid whitesmoke;
+    padding: .3rem 1rem;
+    padding-bottom: 1.5rem;
+    min-height: 10vh;
+
+    > .tab {
+      display: none;
+
+      &.tab-active {
+        display: block;
+      }
+    }
+
+  }
+
+  &.default {
+    > .tabs-links {
+      background-color: @unique-color-alt;
+
+      > button.tabs-link {
+        background-color: @unique-color-alt;
+        color: white;
+
+        &:hover, &.active {
+          background-color: @unique-color;
+        }
+      }
+    }
+
+    > .tabs-body {
+      background-color: white;
+      color: black;
+    }
+  }
+
+}

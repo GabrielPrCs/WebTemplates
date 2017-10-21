@@ -364,3 +364,46 @@ body.side-navbar-is-open.side-navbar-overlapping {
   -ms-filter: blur(5px);
   filter: blur(5px);
 }
+.tabs {
+  margin: 1.5rem 0;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.tabs > .tabs-links {
+  padding: .5rem 1rem;
+}
+.tabs > .tabs-links > button.tabs-link {
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 1s;
+}
+.tabs > .tabs-body {
+  border: 1px solid whitesmoke;
+  padding: .3rem 1rem;
+  padding-bottom: 1.5rem;
+  min-height: 10vh;
+}
+.tabs > .tabs-body > .tab {
+  display: none;
+}
+.tabs > .tabs-body > .tab.tab-active {
+  display: block;
+}
+.tabs.default > .tabs-links {
+  background-color: #1C2331;
+}
+.tabs.default > .tabs-links > button.tabs-link {
+  background-color: #1C2331;
+  color: white;
+}
+.tabs.default > .tabs-links > button.tabs-link:hover,
+.tabs.default > .tabs-links > button.tabs-link.active {
+  background-color: #3F729B;
+}
+.tabs.default > .tabs-body {
+  background-color: white;
+  color: black;
+}
