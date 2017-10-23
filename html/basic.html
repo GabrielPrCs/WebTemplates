@@ -13,6 +13,17 @@
 
   <div class="main-content">
 
+    <ul>
+      <li>
+        <a href="#buttons">Buttons</a>
+      </li>
+      <li>
+        <a href="#selects">Selects</a>
+      </li>
+    </ul>
+
+    <h1 id="buttons" class="text-center">Buttons</h1>
+    <button class="button primary-button medium">Button</button>
     <pre>
       <code>
         &ltbutton class="<span class="red-text">button primary-button small</span>">Example Button&lt/button>
@@ -21,31 +32,19 @@
 
     <h3>Sizes</h3>
 
-    <small>Small:</small><br>
+    <small>Small:</small>
     <button class="button primary-button small">Small Button</button>
-    <pre>
-      <code>
-        &ltbutton class="button primary-button <span class="red-text">small</span>">Small Button&lt/button>
-      </code>
-    </pre>
-    <small>Medium:</small><br>
+    <small>Medium:</small>
     <button class="button primary-button medium">Medium Button</button>
-    <pre>
-      <code>
-        &ltbutton class="button primary-button <span class="red-text">medium</span>">Medium Button&lt/button>
-      </code>
-    </pre>
-    <small>Large:</small><br>
+    <small>Large:</small>
     <button class="button primary-button large">Large Button</button>
-    <pre>
-      <code>
-        &ltbutton class="button primary-button <span class="red-text">large</span>">Large Button&lt/button>
-      </code>
-    </pre>
-    <small>Block:</small>
+    <br><small>Block:</small>
     <button class="button primary-button medium block">Small Block Button</button>
     <pre>
       <code>
+        &ltbutton class="button primary-button <span class="red-text">small</span>">Small Button&lt/button>
+        &ltbutton class="button primary-button <span class="red-text">medium</span>">Medium Button&lt/button>
+        &ltbutton class="button primary-button <span class="red-text">large</span>">Large Button&lt/button>
         &ltbutton class="button primary-button medium <span class="red-text">block</span>">Small Block Button&lt/button>
       </code>
     </pre>
@@ -58,6 +57,7 @@
     <button class="button success-button medium">Success Button</button>
     <button class="button info-button medium">Info Button</button>
     <button class="button warning-button medium">Warning Button</button>
+    <button class="button warning-button medium" disabled>Disabled Button</button>
 
     <pre>
       <code>
@@ -67,8 +67,131 @@
         &ltbutton class="button <span class="red-text">success-button</span> medium">Success Button&lt/button>
         &ltbutton class="button <span class="red-text">info-button</span> medium">Info Button&lt/button>
         &ltbutton class="button <span class="red-text">warning-button</span> medium">Warning Button&lt/button>
+        &ltbutton class="button warning-button medium" <span class="red-text">disabled</span>>Disabled Button&lt/button>
       </code>
     </pre>
+
+    <hr>
+
+    <h1 id="selects" class="text-center">Selects</h1>
+
+
+    <select class="unique-select medium">
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+
+    <pre>
+      <code>
+        &ltselect class="<span class="red-text">unique-select medium</span>">
+          &ltoption>Option 1&lt/option>
+          &ltoption>Option 2&lt/option>
+        &lt/select>
+      </code>
+    </pre>
+
+    <h3>Sizes</h3>
+    <small>Small:</small>
+    <select class="unique-select small">
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+    <small>Medium:</small>
+    <select class="unique-select medium">
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+    <small>Large:</small>
+    <select class="unique-select large">
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+
+    <pre>
+      <code>
+        &ltselect class="unique-select <span class="red-text">small</span>">
+          ...
+        &lt/select>
+        &ltselect class="unique-select <span class="red-text">medium</span>">
+          ...
+        &lt/select>
+        &ltselect class="unique-select <span class="red-text">large</span>">
+          ...
+        &lt/select>
+      </code>
+    </pre>
+
+    <h3>Diferent selects</h3>
+
+    <select class="default-select medium">
+      <option>Default select</option>
+    </select>
+
+    <select class="unique-select medium">
+      <option>Unique select</option>
+    </select>
+
+    <select class="primary-select medium">
+      <option>Primary select</option>
+    </select>
+
+    <select class="danger-select medium">
+      <option>Danger select</option>
+    </select>
+
+    <select class="success-select medium">
+      <option>Success select</option>
+    </select>
+
+    <select class="info-select medium">
+      <option>Info select</option>
+    </select>
+
+    <select class="warning-select medium">
+      <option>Warning select</option>
+    </select>
+
+    <select class="warning-select medium" disabled>
+      <option>Disabled select</option>
+    </select>
+
+    <pre>
+      <code>
+        &ltselect class="<span class="red-text">default-select</span> medium">
+          ...
+        &lt/select>
+
+        &ltselect class="<span class="red-text">unique-select</span> medium">
+          ...
+        &lt/select>
+
+        &ltselect class="<span class="red-text">primary-select</span> medium">
+          ...
+        &lt/select>
+
+        &ltselect class="<span class="red-text">danger-select</span> medium">
+          ...
+        &lt/select>
+
+        &ltselect class="<span class="red-text">success-select</span> medium">
+          ...
+        &lt/select>
+
+        &ltselect class="<span class="red-text">info-select</span> medium">
+          ...
+        &lt/select>
+
+        &ltselect class="<span class="red-text">warning-select</span> medium">
+          ...
+        &lt/select>
+
+        &ltselect class="warning-select medium" <span class="red-text">disabled</span>>
+          ...
+        &lt/select>
+      </code>
+    </pre>
+
+    <hr>
 
   </div>
 

@@ -1,3 +1,6 @@
+.no-shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
+}
 .shadow-1 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -21,10 +24,6 @@ body {
   -ms-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-body > * {
-  line-height: 130%;
-  font-family: 'Roboto Mono', monospace;
-}
 hr {
   border: 0;
   height: 1px;
@@ -47,18 +46,6 @@ pre::before {
   font-weight: bold;
   font-size: 115%;
 }
-.text-justify {
-  text-align: justify;
-}
-.text-center {
-  text-align: center;
-}
-.red-text {
-  color: #ff4444;
-}
-.blue-text {
-  color: #0d47a1;
-}
 .nowrap {
   white-space: nowrap;
 }
@@ -68,6 +55,28 @@ pre::before {
   left: 0;
   width: 90vw;
   margin: 1vh 5vw;
+}
+body > * {
+  line-height: 130%;
+  font-family: 'Roboto Mono', monospace;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.red-text {
+  color: #ff4444;
+}
+.blue-text {
+  color: #0d47a1;
 }
 .button {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -136,6 +145,84 @@ pre::before {
 }
 .button.block {
   width: 100%;
+}
+.button:disabled {
+  background-color: whitesmoke;
+  color: black;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
+  cursor: inherit;
+}
+select {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+  border-radius: .2rem;
+  min-width: 20vw;
+  width: auto;
+  outline: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-weight: bold;
+  padding-left: .4rem;
+  padding-right: .4rem;
+}
+select:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
+}
+select > option {
+  background: white;
+  color: black;
+}
+select.small {
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+}
+select.medium {
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+}
+select.large {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+select.default-select {
+  background-color: #eceff1;
+  border-color: #eceff1;
+  color: black;
+}
+select.unique-select {
+  background-color: #3F729B;
+  border-color: #3F729B;
+  color: white;
+}
+select.primary-select {
+  background-color: #4285F4;
+  border-color: #4285F4;
+  color: white;
+}
+select.danger-select {
+  background-color: #ff4444;
+  border-color: #ff4444;
+  color: white;
+}
+select.success-select {
+  background-color: #00C851;
+  border-color: #00C851;
+  color: white;
+}
+select.info-select {
+  background-color: #33b5e5;
+  color: white;
+}
+select.warning-select {
+  background-color: #ffbb33;
+  border-color: #ffbb33;
+  color: white;
+}
+select:disabled {
+  background-color: white;
+  border-color: whitesmoke;
+  color: whitesmoke;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
 }
 .card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
