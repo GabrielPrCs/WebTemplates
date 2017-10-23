@@ -17,17 +17,15 @@
   .shadow-1;
   text-align: justify;
 
-  * {
-    padding: 1.2rem 1.5rem;
+  > .card-head, .card-footer {
+    padding: 1rem 1.3rem;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
   }
 
-  .card-head {
-    font-weight: bold;
-    font-size: 2rem;
-  }
-
-  .card-footer {
-    font-weight: bold;
+  > .card-body {
+    padding: .6rem 1.3rem;
   }
 
   &.default {
@@ -76,5 +74,39 @@
     @footer-color: @info-color-alt;
     @footer-text-color: white;
     .themeColorsCreator();
+  }
+
+  &.unique {
+    @head-color: @unique-color;
+    @head-text-color: white;
+    @footer-color: @unique-color-alt;
+    @footer-text-color: white;
+    .themeColorsCreator();
+  }
+}
+
+.image-card {
+  .shadow-1;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  > img {
+    width: 100%;
+    &:hover {
+      .shadow-2
+    }
+  }
+  > .image-card-content {
+    margin-top: 0;
+    padding: 1rem;
+  }
+
+  &.default {
+    background-color: white;
+    color: black;
+  }
+
+  &.inverse {
+    background-color: @unique-color-alt;
+    color: white;
   }
 }
