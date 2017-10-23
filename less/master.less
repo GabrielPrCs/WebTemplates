@@ -44,12 +44,12 @@
 .opacity-effect {
   background-color: rgba(0,0,0,0.45);
   > .main-content {
-      @blur: 5px;
-      -webkit-filter: blur(@blur);
-      -moz-filter: blur(@blur);
-      -o-filter: blur(@blur);
-      -ms-filter: blur(@blur);
-      filter: blur(@blur);
+    @blur: 5px;
+    -webkit-filter: blur(@blur);
+    -moz-filter: blur(@blur);
+    -o-filter: blur(@blur);
+    -ms-filter: blur(@blur);
+    filter: blur(@blur);
   }
 }
 
@@ -86,24 +86,6 @@ pre::before {
   font-size: 115%;
 }
 
-.default-button {
-  cursor: pointer;
-  background-color: @primary-color;
-  color: white;
-  text-transform: uppercase;
-  border: none;
-  outline: none;
-  padding: 13px 20px;
-  margin-bottom: 10px;
-
-  .shadow-1;
-
-  &:hover {
-    .shadow-2;
-  }
-
-}
-
 .text-justify {
   text-align: justify;
 }
@@ -132,6 +114,9 @@ pre::before {
   margin: 1vh 5vw;
 }
 
+// Basic components
+@import "partials/buttons.less";
+// Complex components
 @import "partials/card.less";
 @import "partials/side-navbar.less";
 @import "partials/modals.less";

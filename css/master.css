@@ -47,20 +47,6 @@ pre::before {
   font-weight: bold;
   font-size: 115%;
 }
-.default-button {
-  cursor: pointer;
-  background-color: #4285F4;
-  color: white;
-  text-transform: uppercase;
-  border: none;
-  outline: none;
-  padding: 13px 20px;
-  margin-bottom: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-.default-button:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
-}
 .text-justify {
   text-align: justify;
 }
@@ -82,6 +68,74 @@ pre::before {
   left: 0;
   width: 90vw;
   margin: 1vh 5vw;
+}
+.button {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+.button:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
+}
+.button:after {
+  content: "";
+  background: whitesmoke;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -50px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 1s;
+}
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.button.default-button {
+  background-color: #eceff1;
+  color: black;
+}
+.button.primary-button {
+  background-color: #4285F4;
+  color: white;
+}
+.button.danger-button {
+  background-color: #ff4444;
+  color: white;
+}
+.button.success-button {
+  background-color: #00C851;
+  color: white;
+}
+.button.warning-button {
+  background-color: #ffbb33;
+  color: white;
+}
+.button.info-button {
+  background-color: #33b5e5;
+  color: white;
+}
+.button.small {
+  padding: 0.5rem 1.5rem;
+}
+.button.medium {
+  padding: 1rem 2rem;
+}
+.button.large {
+  padding: 1.5rem 2.5rem;
+}
+.button.block {
+  width: 100%;
 }
 .card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -384,6 +438,7 @@ body.side-navbar-is-open.side-navbar-overlapping {
   position: relative;
   border: 1px solid whitesmoke;
   padding-bottom: 1.5rem;
+  overflow: auto;
 }
 .tabs > .tabs-body > .tab {
   position: absolute;
