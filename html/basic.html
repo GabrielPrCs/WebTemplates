@@ -20,6 +20,9 @@
       <li>
         <a href="#selects">Selects</a>
       </li>
+      <li>
+        <a href="#tables">Tables</a>
+      </li>
     </ul>
 
     <h1 id="buttons" class="text-center">Buttons</h1>
@@ -39,13 +42,13 @@
     <small>Large:</small>
     <button class="button primary-button large">Large Button</button>
     <br><small>Block:</small>
-    <button class="button primary-button medium block">Small Block Button</button>
+    <button class="button primary-button medium block">Block Button</button>
     <pre>
       <code>
         &ltbutton class="button primary-button <span class="red-text">small</span>">Small Button&lt/button>
         &ltbutton class="button primary-button <span class="red-text">medium</span>">Medium Button&lt/button>
         &ltbutton class="button primary-button <span class="red-text">large</span>">Large Button&lt/button>
-        &ltbutton class="button primary-button medium <span class="red-text">block</span>">Small Block Button&lt/button>
+        &ltbutton class="button primary-button medium <span class="red-text">block</span>">Block Button&lt/button>
       </code>
     </pre>
 
@@ -106,6 +109,11 @@
       <option>Option 1</option>
       <option>Option 2</option>
     </select>
+    <br><small>Block:</small><br>
+    <select class="unique-select medium block">
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
 
     <pre>
       <code>
@@ -116,6 +124,9 @@
           ...
         &lt/select>
         &ltselect class="unique-select <span class="red-text">large</span>">
+          ...
+        &lt/select>
+        &ltselect class="unique-select medium <span class="red-text">block</span>">
           ...
         &lt/select>
       </code>
@@ -192,6 +203,77 @@
     </pre>
 
     <hr>
+
+    <h1 id="tables" class="text-center">Tables</h1>
+
+    <h3>Dark Table</h3>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+        <table class="table dark-table">
+          <thead>
+            <tr>
+              <th>Col #1</th>
+              <th>Col #2</th>
+              <th>Col #3</th>
+              <th>Col #4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cell (1,1)</td>
+              <td>Cell (1,2)</td>
+              <td>Cell (1,3)</td>
+              <td>Cell (1,4)</td>
+            </tr>
+            <tr>
+              <td>Cell (2,1)</td>
+              <td>Cell (2,2)</td>
+              <td>Cell (2,3)</td>
+              <td>Cell (2,4)</td>
+            </tr>
+            <tr>
+              <td>Cell (3,1)</td>
+              <td>Cell (3,2)</td>
+              <td>Cell (3,3)</td>
+              <td>Cell (3,4)</td>
+            </tr>
+            <tr>
+              <td>Cell (4,1)</td>
+              <td>Cell (4,2)</td>
+              <td>Cell (4,3)</td>
+              <td>Cell (4,4)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <pre>
+      <code>
+        &lttable class="<span class="red-text">table unique-table</span>">
+          &ltthead>
+            &lttr>
+              &ltth>Col #1&lt/th>
+              &ltth>Col #2&lt/th>
+              &ltth>Col #3&lt/th>
+              &ltth>Col #4&lt/th>
+            &lt/tr>
+          &lt/thead>
+          &lttbody>
+            &lttr>
+              &lttd>Cell (1,1)&lt/td>
+              &lttd>Cell (1,2)&lt/td>
+              &lttd>Cell (1,3)&lt/td>
+              &lttd>Cell (1,4)&lt/td>
+            &lt/tr>
+            ...
+          &lt/tbody>
+        &lt/table>
+      </code>
+    </pre>
+
+
 
   </div>
 
