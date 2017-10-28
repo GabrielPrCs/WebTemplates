@@ -998,7 +998,15 @@ select.block {
   background-color: whitesmoke;
   color: black;
 }
-.material-input {
+.material-input-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.material-input-group > i {
+  padding-right: .5rem;
+}
+.material-input-group > input {
   background-color: rgba(0, 0, 0, 0);
   font-size: 18px;
   padding: 10px 10px 10px 5px;
@@ -1006,17 +1014,25 @@ select.block {
   width: 300px;
   border: none;
   border-bottom: 1px solid #757575;
+  -webkit-transition: border-bottom 0.4s ease-in-out;
+  -moz-transition: border-bottom 0.4s ease-in-out;
+  -o-transition: border-bottom 0.4s ease-in-out;
+  -ms-transition: border-bottom 0.4s ease-in-out;
+  transition: border-bottom 0.4s ease-in-out;
 }
-.material-input:focus {
+.material-input-group > input:focus {
   outline: none;
-  background-color: whitesmoke;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  -ms-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  border-bottom: 2px solid #4285F4;
+  -webkit-transition: border-bottom 0.4s ease-in-out;
+  -moz-transition: border-bottom 0.4s ease-in-out;
+  -o-transition: border-bottom 0.4s ease-in-out;
+  -ms-transition: border-bottom 0.4s ease-in-out;
+  transition: border-bottom 0.4s ease-in-out;
 }
-.material-input.block {
+.material-input-group > input:hover {
+  cursor: pointer;
+}
+.material-input-group > input.block {
   width: 100%;
 }
 .card {
