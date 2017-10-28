@@ -29,7 +29,7 @@ hr {
   height: 1px;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
-  margin: 30px 0px;
+  margin: 10px 0px;
 }
 pre {
   padding: 15px 25px;
@@ -833,6 +833,7 @@ body > * {
   text-transform: uppercase;
   border: none;
   outline: none;
+  margin-top: 4px;
   margin-bottom: 10px;
 }
 .button:hover {
