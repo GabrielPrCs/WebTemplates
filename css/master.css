@@ -999,6 +999,7 @@ select.block {
   color: black;
 }
 .material-input {
+  background-color: rgba(0, 0, 0, 0);
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
@@ -1014,6 +1015,9 @@ select.block {
   -o-transition: background-color 0.3s ease-in-out;
   -ms-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
+}
+.material-input.block {
+  width: 100%;
 }
 .card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
