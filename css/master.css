@@ -29,7 +29,7 @@ hr {
   height: 1px;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 pre {
   padding: 15px 25px;
@@ -837,6 +837,7 @@ body > * {
   border: none;
   outline: none;
   margin-top: 4px;
+  padding: 1rem 2rem;
   margin-bottom: 1.5rem;
 }
 .button:hover {
@@ -885,21 +886,21 @@ body > * {
   color: white;
 }
 .button:disabled {
-  background-color: whitesmoke;
-  color: black;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
-  cursor: inherit;
+  background-color: white;
+  color: #eceff1;
+  cursor: not-allowed;
+  border: 1px solid whitesmoke;
 }
-.button.small {
+.button:disabled:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.button.small-button {
   padding: 0.5rem 1.5rem;
 }
-.button.medium {
-  padding: 1rem 2rem;
-}
-.button.large {
+.button.large-button {
   padding: 1.5rem 2.5rem;
 }
-.button.block {
+.button.block-button {
   width: 100%;
 }
 select {
@@ -1359,7 +1360,7 @@ body.side-navbar-is-open.side-navbar-overlapping {
   filter: blur(5px);
 }
 .tabs {
-  margin: 1.5rem 0;
+  margin-bottom: 1.5rem;
   width: 100%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }

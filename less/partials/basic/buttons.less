@@ -8,6 +8,7 @@
   border: none;
   outline: none;
   margin-top: 4px;
+  padding: 1rem 2rem;
   .m-b-n;
   &:hover {
     .shadow-2;
@@ -64,25 +65,24 @@
   }
 
   &:disabled {
-    background-color: whitesmoke;
-    color: black;
-    .no-shadow;
-    cursor: inherit;
+    background-color: white;
+    color: @default-color;
+    cursor:not-allowed;
+    border: 1px solid whitesmoke;
+    &:hover {
+      .shadow-1;
+    }
   }
 
-  &.small {
+  &.small-button {
     padding: 0.5rem 1.5rem;
   }
 
-  &.medium {
-    padding: 1rem 2rem;
-  }
-
-  &.large {
+  &.large-button {
     padding: 1.5rem 2.5rem;
   }
 
-  &.block {
+  &.block-button {
     width: 100%;
   }
 }

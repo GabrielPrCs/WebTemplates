@@ -10,53 +10,115 @@
     <div class="main-content">
 
       <h1 class="text-center">Buttons</h1>
-      <button class="button primary-button medium">Button</button>
-      <pre>
-        <code>
-          &ltbutton class="<span class="red-text">button primary-button small</span>">Example Button&lt/button>
-        </code>
-      </pre>
 
-      <h3>Sizes</h3>
+      <h2>Basic Buttons</h2>
 
-      <small>Small:</small>
-      <button class="button primary-button small">Small Button</button>
-      <small>Medium:</small>
-      <button class="button primary-button medium">Medium Button</button>
-      <small>Large:</small>
-      <button class="button primary-button large">Large Button</button>
-      <br><small>Block:</small>
-      <button class="button primary-button medium block">Block Button</button>
-      <pre>
-        <code>
-          &ltbutton class="button primary-button <span class="red-text">small</span>">Small Button&lt/button>
-          &ltbutton class="button primary-button <span class="red-text">medium</span>">Medium Button&lt/button>
-          &ltbutton class="button primary-button <span class="red-text">large</span>">Large Button&lt/button>
-          &ltbutton class="button primary-button medium <span class="red-text">block</span>">Block Button&lt/button>
-        </code>
-      </pre>
+      <div class="row text-center">
+        <div class="col-xs-12">
+          <button class="button default-button">Default Button</button>
+          <button class="button primary-button">Primary Button</button>
+          <button class="button danger-button">Danger Button</button>
+          <button class="button success-button">Success Button</button>
+          <button class="button info-button">Info Button</button>
+          <button class="button warning-button">Warning Button</button>
+          <button class="button warning-button" disabled>Disabled Button</button>
+        </div>
+      </div>
 
-      <h3>Differents buttons</h3>
+      <div class="row">
+        <div class="col-xs-12">
+          <pre>
+            <code>
+              // Default button
+              &ltbutton class="<span class="red-text">button default-button</span>">Default Button&lt/button>
 
-      <button class="button default-button medium">Default Button</button>
-      <button class="button primary-button medium">Primary Button</button>
-      <button class="button danger-button medium">Danger Button</button>
-      <button class="button success-button medium">Success Button</button>
-      <button class="button info-button medium">Info Button</button>
-      <button class="button warning-button medium">Warning Button</button>
-      <button class="button warning-button medium" disabled>Disabled Button</button>
+              // Primary button
+              &ltbutton class="<span class="red-text">button primary-button</span>">Primary Button&lt/button>
 
-      <pre>
-        <code>
-          &ltbutton class="button <span class="red-text">default-button</span> medium">Default Button&lt/button>
-          &ltbutton class="button <span class="red-text">primary-button</span> medium">Primary Button&lt/button>
-          &ltbutton class="button <span class="red-text">danger-button</span> medium">Danger Button&lt/button>
-          &ltbutton class="button <span class="red-text">success-button</span> medium">Success Button&lt/button>
-          &ltbutton class="button <span class="red-text">info-button</span> medium">Info Button&lt/button>
-          &ltbutton class="button <span class="red-text">warning-button</span> medium">Warning Button&lt/button>
-          &ltbutton class="button warning-button medium" <span class="red-text">disabled</span>>Disabled Button&lt/button>
-        </code>
-      </pre>
+              // Danger button
+              &ltbutton class="<span class="red-text">button danger-button</span>">Danger Button&lt/button>
+
+              // Success button
+              &ltbutton class="<span class="red-text">button success-button</span>">Success Button&lt/button>
+
+              // Info button
+              &ltbutton class="<span class="red-text">button info-button</span>">Info Button&lt/button>
+
+              // Warning button
+              &ltbutton class="<span class="red-text">button warning-button</span>">Warning Button&lt/button>
+
+              // Disabled button (works with all the buttons above)
+              &ltbutton class="button warning-button" <span class="red-text">disabled</span>>Disabled Button&lt/button>
+            </code>
+          </pre>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <hr>
+          <h3>Sizes</h3>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-xs-12 col-md-4">
+          <button class="button primary-button small-button">Small Button</button>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <button class="button primary-button">Button</button>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <button class="button primary-button large-button">Large Button</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <button class="button primary-button small-button block-button">Small Block Button</button>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <button class="button primary-button block-button">Block Button</button>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <button class="button primary-button large-button block-button">Large Block Button</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <pre>
+            <code>
+              // Small button
+              &ltbutton class="button primary-button <span class="red-text">small-button</span>">Small Button&lt/button>
+
+              // Button
+              &ltbutton class="button primary-button">Button&lt/button>
+
+              // Large button
+              &ltbutton class="button primary-button <span class="red-text">large-button</span>">Large Button&lt/button>
+
+              // Small block button
+              &ltbutton class="button primary-button <span class="red-text">small-button block-button</span>">Small Block Button&lt/button>
+
+              // Block button
+              &ltbutton class="button primary-button <span class="red-text">block-button</span>">Block Button&lt/button>
+
+              // Large block button
+              &ltbutton class="button primary-button <span class="red-text">small-button block-button</span>">Large Block Button&lt/button>
+            </code>
+          </pre>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
     </div>
 
   </body>
