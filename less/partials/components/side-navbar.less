@@ -1,0 +1,106 @@
+@phone-width: 70vw;
+@desktop-width: 40vw;
+@wide-desktop-width: 25vw;
+
+.side-navbar {
+
+  @header-height: 8vh;  @body-height: 100vh - @header-height;
+  @effect: ease-in-out;  @attribute: left;  @time: .1s;  .add-transition();
+
+  position: fixed;  top: 0;
+
+  @media @small-phone, @phone, @tablet {
+    width: @phone-width;
+    left: -@phone-width;
+  }
+  @media @desktop {
+    width: @desktop-width;
+    left: -@desktop-width;
+  }
+  @media @wide-desktop {
+    width: @wide-desktop-width;
+    left: -@wide-desktop-width;
+  }
+
+
+  .shadow-1;
+
+
+  &.is-open {
+    left: 0;
+  }
+
+  > .side-navbar-header {
+    text-align: center;
+    height: @header-height;
+    // All image inside the head of the bar has to take an appropriate size.
+    > img {
+      padding: 0.5%;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  > .side-navbar-body {
+    height: @body-height;
+    overflow: auto;
+    > .items {
+      list-style-type: none;
+      > .item {
+        text-align: left;
+        font-weight: bold;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid white;
+      }
+      > .item:hover { cursor: pointer; }
+      > hr { margin: 1rem; }
+    }
+  }
+
+  // Combination of colors for the default theme of the bar
+  &.default {
+    > * {
+      background-color: @unique-color-alt;
+      color: white;
+    }
+    > .side-navbar-body > .items {
+      > .item:hover, .active {
+        background-color: @unique-color;
+      }
+      > li {
+        background-color: @unique-color-alt;
+      }
+    }
+  }
+
+}
+
+// Sets the position of the main content of the page based on the status of the bar.
+body.side-navbar-is-open {
+  position: absolute;
+  width: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  @media @small-phone, @phone, @tablet {
+    left: @phone-width;
+  }
+  @media @desktop {
+    left: @desktop-width;
+  }
+  @media @wide-desktop {
+    left: @wide-desktop-width;
+  }
+  .opacity-effect;
+}
+
+body.side-navbar-is-open.side-navbar-overlapping {
+  overflow-y: hidden;
+  position: absolute;
+  left: 0;
+  width: auto;
+}

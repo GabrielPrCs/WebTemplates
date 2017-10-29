@@ -1,0 +1,89 @@
+select {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+  border-radius: .2rem;
+  min-width: 20vw;
+  width: auto;
+  outline: none;
+  .shadow-1;
+  font-weight: bold;
+  padding-left: .4rem;
+  padding-right: .4rem;
+
+  &:hover {
+    .shadow-2;
+  }
+
+  > option {
+    background: white;
+    color: black;
+  }
+
+  &.default-select {
+    background-color: @default-color;
+    border-color: @default-color;
+    color: black;
+  }
+
+  &.unique-select {
+    background-color: @unique-color;
+    border-color: @unique-color;
+    color: white;
+  }
+
+  &.primary-select {
+    background-color: @primary-color;
+    border-color: @primary-color;
+    color: white;
+  }
+
+  &.danger-select {
+    background-color: @danger-color;
+    border-color: @danger-color;
+    color: white;
+  }
+
+  &.success-select {
+    background-color: @success-color;
+    border-color: @success-color;
+    color: white;
+  }
+
+  &.info-select {
+    background-color: @info-color;
+    color: white;
+  }
+
+  &.warning-select {
+    background-color: @warning-color;
+    border-color: @warning-color;
+    color: white;
+  }
+
+  &:disabled {
+    background-color: white;
+    border-color: whitesmoke;
+    color: whitesmoke;
+    .no-shadow;
+  }
+
+  &.small {
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+  }
+
+  &.medium {
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+  }
+
+  &.large {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &.block {
+    width: 100%;
+  }
+}

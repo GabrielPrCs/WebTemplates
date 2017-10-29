@@ -1,0 +1,34 @@
+
+.material-input-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  > i {
+    padding-right: .5rem;
+  }
+
+  > input {
+    background-color:rgba(0, 0, 0, 0);
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom: 1px solid #757575;
+    @effect: ease-in-out;  @attribute: border-bottom;  @time: .4s;  .add-transition();
+    &:focus {
+      outline:none;
+      border-bottom: 2px solid @primary-color;
+      @effect: ease-in-out;  @attribute: border-bottom;  @time: .4s;  .add-transition();
+    }
+    &:hover{
+      cursor: pointer;
+    }
+    &.block {
+      width: 100%;
+    }
+
+  }
+
+}
