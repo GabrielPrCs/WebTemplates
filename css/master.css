@@ -59,6 +59,18 @@ pre::before {
 .m-b-n {
   margin-bottom: 1.5rem;
 }
+.m-t-n {
+  margin-top: 1.5rem;
+}
+.small-padding {
+  padding: 0.5rem 1.5rem;
+}
+.normal-padding {
+  padding: 1rem 2rem;
+}
+.large-padding {
+  padding: 1.5rem 2.5rem;
+}
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -831,14 +843,15 @@ body > * {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-weight: bold;
   position: relative;
+  border: 1px black solid;
   overflow: hidden;
   cursor: pointer;
   text-transform: uppercase;
-  border: none;
   outline: none;
-  margin-top: 4px;
-  padding: 1rem 2rem;
+  border: none;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  padding: 1rem 2rem;
 }
 .button:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
@@ -904,17 +917,15 @@ body > * {
   width: 100%;
 }
 select {
-  margin-top: 5px;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: left;
-  border-radius: .2rem;
   min-width: 20vw;
   width: auto;
   outline: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-weight: bold;
-  padding-left: .4rem;
-  padding-right: .4rem;
+  padding: 1rem 2rem;
 }
 select:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
@@ -960,22 +971,19 @@ select.warning-select {
 select:disabled {
   background-color: white;
   border-color: whitesmoke;
-  color: whitesmoke;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
+  color: #eceff1;
+  cursor: not-allowed;
 }
-select.small {
-  padding-top: .6rem;
-  padding-bottom: .6rem;
+select:disabled:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-select.medium {
-  padding-top: .8rem;
-  padding-bottom: .8rem;
+select.small-select {
+  padding: 0.5rem 1.5rem;
 }
-select.large {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+select.large-select {
+  padding: 1.5rem 2.5rem;
 }
-select.block {
+select.block-select {
   width: 100%;
 }
 .table {

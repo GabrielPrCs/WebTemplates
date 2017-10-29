@@ -1,14 +1,14 @@
 .button {
   .shadow-1;
   font-weight: bold;
-  position: relative;
+  position: relative; // for onclick effect
+  border: 1px black solid;
   overflow: hidden;
   cursor: pointer;
   text-transform: uppercase;
-  border: none;
   outline: none;
-  margin-top: 4px;
-  padding: 1rem 2rem;
+  border: none;
+  .m-t-n;
   .m-b-n;
   &:hover {
     .shadow-2;
@@ -75,11 +75,13 @@
   }
 
   &.small-button {
-    padding: 0.5rem 1.5rem;
+    .small-padding;
   }
 
+  .normal-padding;
+
   &.large-button {
-    padding: 1.5rem 2.5rem;
+    .large-padding;
   }
 
   &.block-button {

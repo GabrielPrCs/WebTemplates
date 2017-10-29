@@ -8,131 +8,190 @@
   <body>
 
     <div class="main-content">
+
       <h1 class="text-center">Selects</h1>
 
+      <h2>Basic Selects</h2>
 
-      <select class="unique-select medium">
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
+      <div class="row text-center">
+
+        <div class="col-xs-6 col-md-3">
+          <select class="default-select">
+            <option>Default select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <select class="unique-select">
+            <option>Unique select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <select class="primary-select">
+            <option>Primary select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <select class="danger-select">
+            <option>Danger select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <select class="success-select">
+            <option>Success select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <select class="info-select">
+            <option>Info select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <select class="warning-select">
+            <option>Warning select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <select class="warning-select" disabled>
+            <option>Disabled select</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <pre>
+            <code>
+              // Default select
+              &ltselect class="<span class="red-text">default-select</span>">
+                ...
+              &lt/select>
+
+              // Unique select
+              &ltselect class="<span class="red-text">unique-select</span>">
+                ...
+              &lt/select>
+
+              // Primary select
+              &ltselect class="<span class="red-text">primary-select</span>">
+                ...
+              &lt/select>
+
+              // Danger select
+              &ltselect class="<span class="red-text">danger-select</span>">
+                ...
+              &lt/select>
+
+              // Success select
+              &ltselect class="<span class="red-text">success-select</span>">
+                ...
+              &lt/select>
+
+              // Info select
+              &ltselect class="<span class="red-text">info-select</span>">
+                ...
+              &lt/select>
+
+              // Warning select
+              &ltselect class="<span class="red-text">warning-select</span>">
+                ...
+              &lt/select>
+
+              // Disabled select (works with all the selects above)
+              &ltselect class="warning-select" <span class="red-text">disabled</span>>
+                ...
+              &lt/select>
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <hr>
+          <h3>Sizes</h3>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-xs-12 col-md-4">
+          <select class="unique-select small-select">
+            <option>Small select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <select class="unique-select">
+            <option>Select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <select class="unique-select large-select">
+            <option>Large select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <select class="unique-select small-select block-select">
+            <option>Block small select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <select class="unique-select block-select">
+            <option>Block select</option>
+          </select>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <select class="unique-select large-select block-select">
+            <option>Block large select</option>
+          </select>
+        </div>
+      </div>
 
       <pre>
         <code>
-          &ltselect class="<span class="red-text">unique-select medium</span>">
-            &ltoption>Option 1&lt/option>
-            &ltoption>Option 2&lt/option>
+          // Semall select
+          &ltselect class="unique-select <span class="red-text">small-select</span>">
+            ...
+          &lt/select>
+
+          // Select
+          &ltselect class="unique-select">
+            ...
+          &lt/select>
+
+          // Large select
+          &ltselect class="unique-select <span class="red-text">large-select</span>">
+            ...
+          &lt/select>
+
+          // Small block select
+          &ltselect class="unique-select <span class="red-text">small-select block-select</span>">
+            ...
+          &lt/select>
+
+          // Block select
+          &ltselect class="unique-select <span class="red-text">block-select</span>">
+            ...
+          &lt/select>
+
+          // Large block select
+          &ltselect class="unique-select <span class="red-text">large-select block-select</span>">
+            ...
           &lt/select>
         </code>
       </pre>
 
-      <h3>Sizes</h3>
-      <small>Small:</small>
-      <select class="unique-select small">
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
-      <small>Medium:</small>
-      <select class="unique-select medium">
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
-      <small>Large:</small>
-      <select class="unique-select large">
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
-      <br><small>Block:</small><br>
-      <select class="unique-select medium block">
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
-
-      <pre>
-        <code>
-          &ltselect class="unique-select <span class="red-text">small</span>">
-            ...
-          &lt/select>
-          &ltselect class="unique-select <span class="red-text">medium</span>">
-            ...
-          &lt/select>
-          &ltselect class="unique-select <span class="red-text">large</span>">
-            ...
-          &lt/select>
-          &ltselect class="unique-select medium <span class="red-text">block</span>">
-            ...
-          &lt/select>
-        </code>
-      </pre>
-
-      <h3>Diferent selects</h3>
-
-      <select class="default-select medium">
-        <option>Default select</option>
-      </select>
-
-      <select class="unique-select medium">
-        <option>Unique select</option>
-      </select>
-
-      <select class="primary-select medium">
-        <option>Primary select</option>
-      </select>
-
-      <select class="danger-select medium">
-        <option>Danger select</option>
-      </select>
-
-      <select class="success-select medium">
-        <option>Success select</option>
-      </select>
-
-      <select class="info-select medium">
-        <option>Info select</option>
-      </select>
-
-      <select class="warning-select medium">
-        <option>Warning select</option>
-      </select>
-
-      <select class="warning-select medium" disabled>
-        <option>Disabled select</option>
-      </select>
-
-      <pre>
-        <code>
-          &ltselect class="<span class="red-text">default-select</span> medium">
-            ...
-          &lt/select>
-
-          &ltselect class="<span class="red-text">unique-select</span> medium">
-            ...
-          &lt/select>
-
-          &ltselect class="<span class="red-text">primary-select</span> medium">
-            ...
-          &lt/select>
-
-          &ltselect class="<span class="red-text">danger-select</span> medium">
-            ...
-          &lt/select>
-
-          &ltselect class="<span class="red-text">success-select</span> medium">
-            ...
-          &lt/select>
-
-          &ltselect class="<span class="red-text">info-select</span> medium">
-            ...
-          &lt/select>
-
-          &ltselect class="<span class="red-text">warning-select</span> medium">
-            ...
-          &lt/select>
-
-          &ltselect class="warning-select medium" <span class="red-text">disabled</span>>
-            ...
-          &lt/select>
-        </code>
-      </pre>
     </div>
 
   </body>

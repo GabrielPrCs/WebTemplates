@@ -1,15 +1,13 @@
 select {
-  margin-top: 5px;
+  .m-t-n;
   .m-b-n;
   text-align: left;
-  border-radius: .2rem;
+  // border-radius: .2rem;
   min-width: 20vw;
   width: auto;
   outline: none;
   .shadow-1;
   font-weight: bold;
-  padding-left: .4rem;
-  padding-right: .4rem;
 
   &:hover {
     .shadow-2;
@@ -64,26 +62,24 @@ select {
   &:disabled {
     background-color: white;
     border-color: whitesmoke;
-    color: whitesmoke;
-    .no-shadow;
+    color: @default-color;
+    cursor:not-allowed;
+    &:hover {
+      .shadow-1;
+    }
   }
 
-  &.small {
-    padding-top: .6rem;
-    padding-bottom: .6rem;
+  &.small-select {
+    .small-padding;
   }
 
-  &.medium {
-    padding-top: .8rem;
-    padding-bottom: .8rem;
+  .normal-padding;
+
+  &.large-select {
+    .large-padding;
   }
 
-  &.large {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  &.block {
+  &.block-select {
     width: 100%;
   }
 }
