@@ -33,7 +33,7 @@ hr {
 }
 pre {
   padding: 15px 25px;
-  max-height: 45vh;
+  max-height: 55vh;
   overflow: auto;
   height: auto;
   background-color: #eceff1;
@@ -70,6 +70,10 @@ pre::before {
 }
 .large-padding {
   padding: 1.5rem 2.5rem;
+}
+.center-vertical {
+  display: flex;
+  align-items: center;
 }
 .container-fluid {
   margin-right: auto;
@@ -849,6 +853,7 @@ body > * {
   text-transform: uppercase;
   outline: none;
   border: none;
+  color: white;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   padding: 1rem 2rem;
@@ -875,37 +880,68 @@ body > * {
   transition: 0s;
 }
 .button.default-button {
-  background-color: #eceff1;
-  color: black;
+  background-color: #2BBBAD;
+}
+.button.default-button.outline-button {
+  color: #2BBBAD;
+  border-color: #2BBBAD;
 }
 .button.primary-button {
   background-color: #4285F4;
-  color: white;
+}
+.button.primary-button.outline-button {
+  color: #4285F4;
+  border-color: #4285F4;
 }
 .button.danger-button {
   background-color: #ff4444;
-  color: white;
+}
+.button.danger-button.outline-button {
+  color: #ff4444;
+  border-color: #ff4444;
 }
 .button.success-button {
   background-color: #00C851;
-  color: white;
+}
+.button.success-button.outline-button {
+  color: #00C851;
+  border-color: #00C851;
 }
 .button.warning-button {
   background-color: #ffbb33;
-  color: white;
+}
+.button.warning-button.outline-button {
+  color: #ffbb33;
+  border-color: #ffbb33;
 }
 .button.info-button {
   background-color: #33b5e5;
-  color: white;
+}
+.button.info-button.outline-button {
+  color: #33b5e5;
+  border-color: #33b5e5;
 }
 .button:disabled {
   background-color: white;
-  color: #eceff1;
+  color: whitesmoke;
   cursor: not-allowed;
-  border: 1px solid whitesmoke;
 }
 .button:disabled:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.button:disabled.outline-button {
+  color: whitesmoke;
+  border-style: solid;
+  border-width: 2px;
+  border-color: whitesmoke;
+}
+.button.outline-button {
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+}
+.button.rounded-button {
+  border-radius: 3rem;
 }
 .button.small-button {
   padding: 0.5rem 1.5rem;
@@ -925,6 +961,7 @@ select {
   outline: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-weight: bold;
+  color: white;
   padding: 1rem 2rem;
 }
 select:hover {
@@ -935,43 +972,36 @@ select > option {
   color: black;
 }
 select.default-select {
-  background-color: #eceff1;
-  border-color: #eceff1;
-  color: black;
+  background-color: #2BBBAD;
+  border-color: #2BBBAD;
 }
 select.unique-select {
   background-color: #3F729B;
   border-color: #3F729B;
-  color: white;
 }
 select.primary-select {
   background-color: #4285F4;
   border-color: #4285F4;
-  color: white;
 }
 select.danger-select {
   background-color: #ff4444;
   border-color: #ff4444;
-  color: white;
 }
 select.success-select {
   background-color: #00C851;
   border-color: #00C851;
-  color: white;
 }
 select.info-select {
   background-color: #33b5e5;
-  color: white;
 }
 select.warning-select {
   background-color: #ffbb33;
   border-color: #ffbb33;
-  color: white;
 }
 select:disabled {
   background-color: white;
   border-color: whitesmoke;
-  color: #eceff1;
+  color: whitesmoke;
   cursor: not-allowed;
 }
 select:disabled:hover {
@@ -1066,7 +1096,7 @@ select.block-select {
   padding: .6rem 1.3rem;
 }
 .card.default .card-head {
-  background-color: #eceff1;
+  background-color: #2BBBAD;
   color: black;
 }
 .card.default .card-body {
@@ -1074,7 +1104,7 @@ select.block-select {
   background-color: white;
 }
 .card.default .card-footer {
-  background-color: #546e7a;
+  background-color: #00695c;
   color: white;
 }
 .card.primary .card-head {

@@ -8,6 +8,8 @@
   text-transform: uppercase;
   outline: none;
   border: none;
+  color: white;
+
   .m-t-n;
   .m-b-n;
   &:hover {
@@ -36,42 +38,76 @@
 
   &.default-button {
     background-color: @default-color;
-    color: black;
+    &.outline-button{
+      color: @default-color;
+      border-color: @default-color;
+    }
   }
 
   &.primary-button {
     background-color: @primary-color;
-    color: white;
+    &.outline-button{
+      color: @primary-color;
+      border-color: @primary-color;
+    }
   }
 
   &.danger-button {
     background-color: @danger-color;
-    color: white;
+    &.outline-button{
+      color: @danger-color;
+      border-color: @danger-color;
+    }
   }
 
   &.success-button {
     background-color: @success-color;
-    color: white;
+    &.outline-button{
+      color: @success-color;
+      border-color: @success-color;
+    }
   }
 
   &.warning-button {
     background-color: @warning-color;
-    color: white;
+    &.outline-button{
+      color: @warning-color;
+      border-color: @warning-color;
+    }
   }
 
   &.info-button {
     background-color: @info-color;
-    color: white;
+    &.outline-button{
+      color: @info-color;
+      border-color: @info-color;
+    }
   }
 
   &:disabled {
     background-color: white;
-    color: @default-color;
+    color: whitesmoke;
     cursor:not-allowed;
-    border: 1px solid whitesmoke;
     &:hover {
       .shadow-1;
     }
+    &.outline-button{
+      color: whitesmoke;
+      border-style: solid;
+      border-width: 2px;
+      border-color: whitesmoke;
+    }
+  }
+
+  // Placed here so overrides the background colors
+  &.outline-button {
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+  }
+
+  &.rounded-button {
+    border-radius: 3rem;
   }
 
   &.small-button {
