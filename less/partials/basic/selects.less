@@ -1,4 +1,4 @@
-select {
+.select {
   .m-t-n;
   .m-b-n;
   text-align: left;
@@ -9,6 +9,7 @@ select {
   .shadow-1;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 
   &:hover {
     .shadow-2;
@@ -53,11 +54,26 @@ select {
     border-color: @warning-color;
   }
 
+  &.material-select {
+    color: black;
+    background-color:rgba(0, 0, 0, 0);
+    font-size:18px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom: 1px solid #757575;
+    padding-left: 0px;
+    .no-shadow;
+    &:disabled:hover {
+      .no-shadow;
+    }
+  }
+
   &:disabled {
     background-color: white;
     border-color: whitesmoke;
     color: whitesmoke;
-    cursor:not-allowed;
+    cursor: not-allowed;
     &:hover {
       .shadow-1;
     }
@@ -65,12 +81,18 @@ select {
 
   &.small-select {
     .small-padding;
+    &.material-select{
+      padding-left: 0px;
+    }
   }
 
   .normal-padding;
 
   &.large-select {
     .large-padding;
+    &.material-select{
+      padding-left: 0px;
+    }
   }
 
   &.block-select {

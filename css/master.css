@@ -952,7 +952,7 @@ body > * {
 .button.block-button {
   width: 100%;
 }
-select {
+.select {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: left;
@@ -962,58 +962,79 @@ select {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-weight: bold;
   color: white;
+  cursor: pointer;
   padding: 1rem 2rem;
 }
-select:hover {
+.select:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
-select > option {
+.select > option {
   background: white;
   color: black;
 }
-select.default-select {
+.select.default-select {
   background-color: #2BBBAD;
   border-color: #2BBBAD;
 }
-select.unique-select {
+.select.unique-select {
   background-color: #3F729B;
   border-color: #3F729B;
 }
-select.primary-select {
+.select.primary-select {
   background-color: #4285F4;
   border-color: #4285F4;
 }
-select.danger-select {
+.select.danger-select {
   background-color: #ff4444;
   border-color: #ff4444;
 }
-select.success-select {
+.select.success-select {
   background-color: #00C851;
   border-color: #00C851;
 }
-select.info-select {
+.select.info-select {
   background-color: #33b5e5;
 }
-select.warning-select {
+.select.warning-select {
   background-color: #ffbb33;
   border-color: #ffbb33;
 }
-select:disabled {
+.select.material-select {
+  color: black;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+  padding-left: 0px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
+}
+.select.material-select:disabled:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
+}
+.select:disabled {
   background-color: white;
   border-color: whitesmoke;
   color: whitesmoke;
   cursor: not-allowed;
 }
-select:disabled:hover {
+.select:disabled:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-select.small-select {
+.select.small-select {
   padding: 0.5rem 1.5rem;
 }
-select.large-select {
+.select.small-select.material-select {
+  padding-left: 0px;
+}
+.select.large-select {
   padding: 1.5rem 2.5rem;
 }
-select.block-select {
+.select.large-select.material-select {
+  padding-left: 0px;
+}
+.select.block-select {
   width: 100%;
 }
 .table {
