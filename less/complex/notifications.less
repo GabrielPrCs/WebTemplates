@@ -1,0 +1,54 @@
+.notifications-panel {
+  .opacity-effect;
+  position: fixed;
+  top: 0;
+  .small-padding;
+  right: -100vw;
+  width: auto;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+  @effect: ease-in-out;  @attribute: all;  @time: .3s;  .add-transition();
+  >.notification {
+    min-width: 20vw;
+    width: auto;
+    height: auto;
+    .large-padding;
+    .shadow-1;
+    .m-b-small;
+    color: white;
+
+    > span.notification-title{
+      font-weight: bold;
+      font-size: 125%;
+    }
+    > p.notification-content{
+      border-top: 1px solid whitesmoke;
+      padding-top: 1rem;
+      text-align: justify;
+    }
+    &:hover {
+      .shadow-2;
+      cursor: pointer;
+    }
+    &.notification-default {
+      background-color: @default-color;
+    }
+    &.notification-primary {
+      background-color: @primary-color;
+    }
+    &.notification-danger {
+      background-color: @danger-color;
+    }
+    &.notification-success {
+      background-color: @success-color;
+    }
+    &.notification-info {
+      background-color: @info-color;
+    }
+    &.notification-warning {
+      background-color: @warning-color;
+    }
+  }
+
+}

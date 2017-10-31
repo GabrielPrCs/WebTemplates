@@ -7,6 +7,13 @@
 .shadow-2 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
+.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 .opacity-effect {
   background-color: rgba(0, 0, 0, 0.45);
 }
@@ -55,6 +62,9 @@ pre::before {
   left: 0;
   width: 90vw;
   margin: 1vh 5vw;
+}
+.m-b-small {
+  margin-bottom: .5rem;
 }
 .m-b-n {
   margin-bottom: 1.5rem;
@@ -1470,4 +1480,67 @@ body.side-navbar-is-open.side-navbar-overlapping {
 .tabs.default > .tabs-body {
   background-color: white;
   color: black;
+}
+.notifications-panel {
+  background-color: rgba(0, 0, 0, 0.45);
+  position: fixed;
+  top: 0;
+  padding: 0.5rem 1.5rem;
+  right: -100vw;
+  width: auto;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.notifications-panel > .main-content {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.notifications-panel > .notification {
+  min-width: 20vw;
+  width: auto;
+  height: auto;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-bottom: .5rem;
+  color: white;
+}
+.notifications-panel > .notification > span.notification-title {
+  font-weight: bold;
+  font-size: 125%;
+}
+.notifications-panel > .notification > p.notification-content {
+  border-top: 1px solid whitesmoke;
+  padding-top: 1rem;
+  text-align: justify;
+}
+.notifications-panel > .notification:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
+  cursor: pointer;
+}
+.notifications-panel > .notification.notification-default {
+  background-color: #2BBBAD;
+}
+.notifications-panel > .notification.notification-primary {
+  background-color: #4285F4;
+}
+.notifications-panel > .notification.notification-danger {
+  background-color: #ff4444;
+}
+.notifications-panel > .notification.notification-success {
+  background-color: #00C851;
+}
+.notifications-panel > .notification.notification-info {
+  background-color: #33b5e5;
+}
+.notifications-panel > .notification.notification-warning {
+  background-color: #ffbb33;
 }

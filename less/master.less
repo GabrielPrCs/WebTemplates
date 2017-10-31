@@ -44,15 +44,19 @@
   transition: @transition;
 }
 
+.blur {
+  @blur: 5px;
+  -webkit-filter: blur(@blur);
+  -moz-filter: blur(@blur);
+  -o-filter: blur(@blur);
+  -ms-filter: blur(@blur);
+  filter: blur(@blur);
+}
+
 .opacity-effect {
   background-color: rgba(0,0,0,0.45);
   > .main-content {
-    @blur: 5px;
-    -webkit-filter: blur(@blur);
-    -moz-filter: blur(@blur);
-    -o-filter: blur(@blur);
-    -ms-filter: blur(@blur);
-    filter: blur(@blur);
+    .blur;
   }
 }
 
@@ -96,6 +100,10 @@ pre {
   margin: 1vh 5vw;
 }
 
+
+.m-b-small{
+  margin-bottom: .5rem;
+}
 // Normal margin bottom
 .m-b-n{
   margin-bottom: 1.5rem;
@@ -126,13 +134,14 @@ pre {
 // Flexbox grid
 @import "flexboxgrid.less";
 // Basic components
-@import "partials/basic/text.less";
-@import "partials/basic/buttons.less";
-@import "partials/basic/selects.less"; // TODO multiple selection
-@import "partials/basic/tables.less";
-@import "partials/basic/inputs.less";
+@import "basic/text.less";
+@import "basic/buttons.less";
+@import "basic/selects.less"; // TODO multiple selection
+@import "basic/tables.less";
+@import "basic/inputs.less";
 // Complex components
-@import "partials/complex/cards.less";
-@import "partials/complex/side-navbar.less";
-@import "partials/complex/modals.less";
-@import "partials/complex/tabs.less";
+@import "complex/cards.less";
+@import "complex/side-navbar.less";
+@import "complex/modals.less";
+@import "complex/tabs.less";
+@import "complex/notifications.less";
