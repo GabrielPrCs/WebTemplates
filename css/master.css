@@ -1445,15 +1445,11 @@ body.side-navbar-is-open.side-navbar-overlapping {
   transition: 1s;
 }
 .tabs > .tabs-body {
-  position: relative;
   border: 1px solid whitesmoke;
   padding-bottom: 1.5rem;
   overflow: auto;
 }
 .tabs > .tabs-body > .tab {
-  position: absolute;
-  top: 0;
-  padding: .3rem 1.5rem;
   transform: scale(0);
   visibility: hidden;
   -webkit-transition: transform 0.15s ease-in-out;
@@ -1463,6 +1459,10 @@ body.side-navbar-is-open.side-navbar-overlapping {
   transition: transform 0.15s ease-in-out;
 }
 .tabs > .tabs-body > .tab.tab-active {
+  height: auto;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: .3rem 1.5rem;
   transform: scale(1);
   visibility: visible;
 }
