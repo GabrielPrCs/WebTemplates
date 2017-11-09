@@ -228,12 +228,17 @@
         </div>
         <div class="col-xs-12 col-md-4">
           <select class="select material-select block-select block-select">
-            <option>Block elect</option>
+            <option>Block select</option>
           </select>
         </div>
         <div class="col-xs-12 col-md-4">
           <select class="select material-select large-select block-select block-select">
             <option>Large block select</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <select class="select material-select large-select block-select block-select" disabled>
+            <option>Large block select disabled</option>
           </select>
         </div>
       </div>
@@ -258,6 +263,9 @@
                 ...
               &lt/select>
               &ltselect class="<span class="red-text">select material-select large-select block-select</span>">
+                ...
+              &lt/select>
+              &ltselect class="select material-select large-select block-select" <span class="red-text">disabled</span>>
                 ...
               &lt/select>
             </code>

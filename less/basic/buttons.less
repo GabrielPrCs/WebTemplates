@@ -1,126 +1,60 @@
 .button {
-  .shadow-1;
-  font-weight: bold;
-  position: relative; // for onclick effect
-  border: 1px black solid;
-  overflow: hidden;
+  // Margins
+  .normal-margin-top; .normal-margin-bottom;
+  // Text and Fonts
+  font-weight: bold; text-transform: uppercase; color: white;
+  // Borders and Outline
+  outline: none; border: none; &.rounded-button { border-radius: 3rem; }
+  // Cursor
   cursor: pointer;
-  text-transform: uppercase;
-  outline: none;
-  border: none;
-  color: white;
+  // Shadow
+  .shadow-1;  &:hover { .shadow-2; }
+  // Width
+  min-width: 20vw; width: auto;
 
-  .m-t-n;
-  .m-b-n;
-  &:hover {
-    .shadow-2;
+  // Differents Colors
+  &.default-button {  background-color: @default-color;
+    &.outline-button{ color: @default-color; border-color: @default-color; }
+  }
+  &.primary-button {  background-color: @primary-color;
+    &.outline-button{ color: @primary-color; border-color: @primary-color; }
+  }
+  &.danger-button {   background-color: @danger-color;
+    &.outline-button{ color: @danger-color; border-color: @danger-color; }
+  }
+  &.success-button {  background-color: @success-color;
+    &.outline-button{ color: @success-color; border-color: @success-color; }
+  }
+  &.warning-button {  background-color: @warning-color;
+    &.outline-button{ color: @warning-color; border-color: @warning-color; }
+  }
+  &.info-button {     background-color: @info-color;
+    &.outline-button{ color: @info-color; border-color: @info-color; }
   }
 
-  &:after {
-    content: "";
-    background: whitesmoke;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -50px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 1s
-  }
-
-  &:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
-  }
-
-  &.default-button {
-    background-color: @default-color;
-    &.outline-button{
-      color: @default-color;
-      border-color: @default-color;
-    }
-  }
-
-  &.primary-button {
-    background-color: @primary-color;
-    &.outline-button{
-      color: @primary-color;
-      border-color: @primary-color;
-    }
-  }
-
-  &.danger-button {
-    background-color: @danger-color;
-    &.outline-button{
-      color: @danger-color;
-      border-color: @danger-color;
-    }
-  }
-
-  &.success-button {
-    background-color: @success-color;
-    &.outline-button{
-      color: @success-color;
-      border-color: @success-color;
-    }
-  }
-
-  &.warning-button {
-    background-color: @warning-color;
-    &.outline-button{
-      color: @warning-color;
-      border-color: @warning-color;
-    }
-  }
-
-  &.info-button {
-    background-color: @info-color;
-    &.outline-button{
-      color: @info-color;
-      border-color: @info-color;
-    }
-  }
-
+  // Disabled Style
   &:disabled {
     background-color: white;
-    color: whitesmoke;
-    cursor:not-allowed;
-    &:hover {
-      .shadow-1;
-    }
-    &.outline-button{
-      color: whitesmoke;
-      border-style: solid;
-      border-width: 2px;
-      border-color: whitesmoke;
-    }
+    color: @disabled-color;
+    cursor: not-allowed;
+    &:hover { .shadow-1; }
   }
 
-  // Placed here so overrides the background colors
+  // "On click" effect
+  &:active { opacity: .75; }
+
+  // Outline button basic style
+  // Placed here so overrides the background colors on the normal buttons
   &.outline-button {
     background-color: white;
     border-style: solid;
     border-width: 2px;
+    &:disabled { color: @disabled-color; border-color: @disabled-color; }
   }
 
-  &.rounded-button {
-    border-radius: 3rem;
-  }
-
-  &.small-button {
-    .small-padding;
-  }
-
-  .normal-padding;
-
-  &.large-button {
-    .large-padding;
-  }
-
-  &.block-button {
-    width: 100%;
-  }
+  // Differents sizes
+  &.small-button { .small-padding; }
+  /* Normal size */.normal-padding;
+  &.large-button { .large-padding; }
+  &.block-button { width: 100%; }
 }

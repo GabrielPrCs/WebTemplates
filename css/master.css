@@ -63,14 +63,23 @@ pre::before {
   width: 90vw;
   margin: 1vh 5vw;
 }
-.m-b-small {
-  margin-bottom: .5rem;
+.small-margin-top {
+  margin-top: 0.5rem;
 }
-.m-b-n {
+.small-margin-bottom {
+  margin-bottom: 0.5rem;
+}
+.normal-margin-top {
+  margin-top: 1.5rem;
+}
+.normal-margin-bottom {
   margin-bottom: 1.5rem;
 }
-.m-t-n {
-  margin-top: 1.5rem;
+.large-margin-top {
+  margin-top: 2.5rem;
+}
+.large-margin-bottom {
+  margin-bottom: 2.5rem;
 }
 .small-padding {
   padding: 0.5rem 1.5rem;
@@ -84,6 +93,7 @@ pre::before {
 .center-vertical {
   display: flex;
   align-items: center;
+  /* justify-content: flex-start; */
 }
 .container-fluid {
   margin-right: auto;
@@ -854,40 +864,25 @@ body > * {
   color: #0d47a1;
 }
 .button {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  font-weight: bold;
-  position: relative;
-  border: 1px black solid;
-  overflow: hidden;
-  cursor: pointer;
-  text-transform: uppercase;
-  outline: none;
-  border: none;
-  color: white;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  min-width: 20vw;
+  width: auto;
+  /* Normal size */
   padding: 1rem 2rem;
+}
+.button.rounded-button {
+  border-radius: 3rem;
 }
 .button:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
-}
-.button:after {
-  content: "";
-  background: whitesmoke;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -50px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 1s;
-}
-.button:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s;
 }
 .button.default-button {
   background-color: #2BBBAD;
@@ -933,25 +928,23 @@ body > * {
 }
 .button:disabled {
   background-color: white;
-  color: whitesmoke;
+  color: #78909C;
   cursor: not-allowed;
 }
 .button:disabled:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.button:disabled.outline-button {
-  color: whitesmoke;
-  border-style: solid;
-  border-width: 2px;
-  border-color: whitesmoke;
+.button:active {
+  opacity: .75;
 }
 .button.outline-button {
   background-color: white;
   border-style: solid;
   border-width: 2px;
 }
-.button.rounded-button {
-  border-radius: 3rem;
+.button.outline-button:disabled {
+  color: #78909C;
+  border-color: #78909C;
 }
 .button.small-button {
   padding: 0.5rem 1.5rem;
@@ -966,58 +959,46 @@ body > * {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: left;
-  min-width: 20vw;
+  font-size: 103%;
+  color: white;
+  min-width: 30vw;
   width: auto;
   outline: none;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  font-weight: bold;
-  color: white;
+  border: none;
   cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  /* Normal size */
   padding: 1rem 2rem;
+  padding-left: 15px;
 }
 .select:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
-.select > option {
-  background: white;
-  color: black;
-}
 .select.default-select {
   background-color: #2BBBAD;
-  border-color: #2BBBAD;
 }
 .select.unique-select {
   background-color: #3F729B;
-  border-color: #3F729B;
 }
 .select.primary-select {
   background-color: #4285F4;
-  border-color: #4285F4;
 }
 .select.danger-select {
   background-color: #ff4444;
-  border-color: #ff4444;
 }
 .select.success-select {
   background-color: #00C851;
-  border-color: #00C851;
 }
 .select.info-select {
   background-color: #33b5e5;
 }
 .select.warning-select {
   background-color: #ffbb33;
-  border-color: #ffbb33;
 }
 .select.material-select {
   color: black;
-  background-color: rgba(0, 0, 0, 0);
-  font-size: 18px;
-  display: block;
-  width: 300px;
-  border: none;
+  background-color: white;
   border-bottom: 1px solid #757575;
-  padding-left: 0px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
 }
 .select.material-select:disabled:hover {
@@ -1025,8 +1006,8 @@ body > * {
 }
 .select:disabled {
   background-color: white;
-  border-color: whitesmoke;
-  color: whitesmoke;
+  border-color: #78909C;
+  color: #78909C;
   cursor: not-allowed;
 }
 .select:disabled:hover {
@@ -1034,82 +1015,81 @@ body > * {
 }
 .select.small-select {
   padding: 0.5rem 1.5rem;
-}
-.select.small-select.material-select {
-  padding-left: 0px;
+  padding-left: 15px;
 }
 .select.large-select {
   padding: 1.5rem 2.5rem;
-}
-.select.large-select.material-select {
-  padding-left: 0px;
+  padding-left: 15px;
 }
 .select.block-select {
   width: 100%;
 }
 .table {
-  width: 100%;
-  border-spacing: 0px;
-  border-collapse: separate;
-  margin-bottom: 1.5rem;
-}
-.table > thead,
-.table tbody {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-spacing: 0px;
 }
 .table > thead > tr > *,
-.table tbody > tr > * {
-  padding: .7rem;
+.table > tbody > tr > * {
+  border-bottom: 1px solid #dedede;
+  padding: 0.5rem 1.5rem;
+}
+.table > tbody > tr:hover {
+  background-color: whitesmoke;
+  color: black;
 }
 .table.dark-table > thead {
   background-color: #1C2331;
   color: white;
 }
-.table.dark-table > tbody > tr > * {
-  border-bottom: 1px solid #dedede;
+.input-group {
+  position: relative;
 }
-.table.dark-table > tbody > tr:hover {
-  background-color: whitesmoke;
-  color: black;
+.input-group > * {
+  -webkit-transition: border-bottom 0.4s ease-in-out;
+  -moz-transition: border-bottom 0.4s ease-in-out;
+  -o-transition: border-bottom 0.4s ease-in-out;
+  -ms-transition: border-bottom 0.4s ease-in-out;
+  transition: border-bottom 0.4s ease-in-out;
 }
-.material-input-group {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.input-group > label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 75%;
+  font-weight: bold;
+  color: #1C2331;
 }
-.material-input-group > * {
+.input-group > input {
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
-}
-.material-input-group > i {
-  padding-right: .5rem;
-}
-.material-input-group > input {
-  background-color: rgba(0, 0, 0, 0);
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 300px;
-  border: none;
-  border-bottom: 1px solid #757575;
-  -webkit-transition: border-bottom 0.4s ease-in-out;
-  -moz-transition: border-bottom 0.4s ease-in-out;
-  -o-transition: border-bottom 0.4s ease-in-out;
-  -ms-transition: border-bottom 0.4s ease-in-out;
-  transition: border-bottom 0.4s ease-in-out;
-}
-.material-input-group > input:focus {
+  font-size: 102%;
   outline: none;
-  border-bottom: 2px solid #4285F4;
-  -webkit-transition: border-bottom 0.4s ease-in-out;
-  -moz-transition: border-bottom 0.4s ease-in-out;
-  -o-transition: border-bottom 0.4s ease-in-out;
-  -ms-transition: border-bottom 0.4s ease-in-out;
-  transition: border-bottom 0.4s ease-in-out;
+  border: none;
+  padding: 1rem 2rem;
+  padding-left: 0px;
+  padding-right: 0px;
 }
-.material-input-group > input:hover {
-  cursor: pointer;
+.input-group > input:invalid ~ label {
+  color: #1C2331;
 }
-.material-input-group > input.block {
+.input-group > input:valid ~ label {
+  color: #4285F4;
+}
+.input-group > input.material-input {
+  background-color: white;
+}
+.input-group > input.material-input:invalid {
+  border-bottom: 1px solid #1C2331;
+}
+.input-group > input.material-input:valid {
+  border-bottom: 1px solid #4285F4;
+}
+.input-group > input.block-input {
   width: 100%;
 }
 .card {
@@ -1470,6 +1450,7 @@ body.side-navbar-is-open.side-navbar-overlapping {
   padding: .3rem 1.5rem;
   transform: scale(1);
   visibility: visible;
+  overflow: hidden;
 }
 .tabs.default > .tabs-links {
   background-color: #1C2331;
@@ -1515,7 +1496,7 @@ body.side-navbar-is-open.side-navbar-overlapping {
   height: auto;
   padding: 1.5rem 2.5rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   color: white;
 }
 .notifications-panel > .notification > span.notification-title {

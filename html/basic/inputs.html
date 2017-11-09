@@ -12,40 +12,54 @@
 
       <h1 class="text-center">Inputs</h1>
 
-      <h3>Material Design Input</h3>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Material Design Input</h2>
+          <div class="input-group">
+            <input type="email" class="material-input" placeholder="Placeholder" required>
+            <label>Material Design Input</label>
+          </div>
 
-      <div class="material-input-group">
-        <i class="fa fa-address-book" aria-hidden="true"></i>
-        <input type="text" placeholder="Testing input">
+          <div class="input-group">
+            <input class="block-input material-input" placeholder="Placeholder" required>
+            <label>Material Design Block Input</label>
+          </div>
+
+          <pre>
+            <code>
+              &ltdiv class="<span class="red-text">input-group</span>">
+                &ltinput class="<span class="red-text">material-input</span>" <span class="blue-text">required</span>>
+                &ltlabel>Material Design Input&lt/label>
+              &lt/div>
+
+              &ltdiv class="<span class="red-text">input-group</span>">
+                &ltinput class="<span class="red-text">material-input block-input</span>" <span class="blue-text">required</span>>
+                &ltlabel>Material Design Block Input&lt/label>
+              &lt/div>
+            </code>
+          </pre>
+        </div>
       </div>
 
-      <pre>
-        <code>
-          &ltdiv class="<span class="red-text">material-input-group</span>">
-            &lti class="fa fa-address-book" aria-hidden="true"></i> // fontawesome icon
-            &ltinput type="text" placeholder="Testing input">
-          &lt/div>
-        </code>
-      </pre>
-
-      <h3>Sizes</h3>
-
-      <small>Block</small>
-      <div class="material-input-group">
-        <i class="fa fa-address-book" aria-hidden="true"></i>
-        <input type="text" placeholder="Testing input" class="block">
+      <div class="row">
+        <div class="col-xs-12">
+          <hr>
+          <h2>Extra Explanations</h2>
+          <ul>
+            <li>
+              The label has to be <span class="blue-text">below</span> the input for a correct behavior. <br>
+            </li>
+            <li>
+              The <span class="blue-text">required</span> attribute makes the input color black <span class="red-text">(invalid input)</span> when it is empty.
+              Otherwise, if the input is not required, its color will be blue <span class="red-text">(valid input)</span>.
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <pre>
-        <code>
-          &ltdiv class="material-input-group">
-            &lti class="fa fa-address-book" aria-hidden="true"></i>
-            &ltinput type="text" placeholder="Testing input" class="<span class="red-text">block</span>">
-          &lt/div>
-        </code>
-      </pre>
 
     </div>
 
+
   </body>
+
 </html>

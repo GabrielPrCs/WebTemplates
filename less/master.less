@@ -1,39 +1,24 @@
+// Media quieries
 @small-phone: ~"only screen and (min-width : 320px)";
 @phone: ~"only screen and (min-width : 480px)";
 @tablet: ~"only screen and (min-width : 768px)";
 @desktop: ~"only screen and (min-width : 992px)";
 @wide-desktop: ~"only screen and (min-width : 1200px)";
 
-@default-color: #2BBBAD;
-@default-color-alt: #00695c;
+// Bootstrap colors
+@default-color:  #2BBBAD; @default-color-alt: #00695c;
+@primary-color:  #4285F4; @primary-color-alt: #0d47a1;
+@danger-color:   #ff4444; @danger-color-alt:  #CC0000;
+@warning-color:  #ffbb33; @warning-color-alt: #FF8800;
+@success-color:  #00C851; @success-color-alt: #007E33;
+@info-color:     #33b5e5; @info-color-alt:    #0099CC;
+@unique-color:   #3F729B; @unique-color-alt:  #1C2331;
+@disabled-color: #78909C;
 
-@primary-color: #4285F4;
-@primary-color-alt: #0d47a1;
-
-@danger-color: #ff4444;
-@danger-color-alt: #CC0000;
-
-@warning-color: #ffbb33;
-@warning-color-alt: #FF8800;
-
-@success-color: #00C851;
-@success-color-alt: #007E33;
-
-@info-color: #33b5e5;
-@info-color-alt: #0099CC;
-
-@unique-color: #3F729B;
-@unique-color-alt: #1C2331;
-
-.no-shadow {
-  box-shadow: 0 3px 6px rgba(0,0,0,0), 0 3px 6px rgba(0,0,0,0);
-}
-.shadow-1 {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-.shadow-2 {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.32), 0 3px 6px rgba(0,0,0,0.46);
-}
+// Material design shadows
+.no-shadow { box-shadow: 0 3px 6px rgba(0,0,0,0), 0 3px 6px rgba(0,0,0,0); }
+.shadow-1 {  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); }
+.shadow-2 {  box-shadow: 0 3px 6px rgba(0,0,0,0.32), 0 3px 6px rgba(0,0,0,0.46); }
 
 .add-transition() {
   @transition: @attribute @time @effect;
@@ -100,36 +85,20 @@ pre {
   margin: 1vh 5vw;
 }
 
+// Margins
+.small-margin-top { margin-top: .5rem }
+.small-margin-bottom { margin-bottom: .5rem }
+.normal-margin-top { margin-top: 1.5rem }
+.normal-margin-bottom { margin-bottom: 1.5rem }
+.large-margin-top { margin-top: 2.5rem }
+.large-margin-bottom { margin-bottom: 2.5rem }
 
-.m-b-small{
-  margin-bottom: .5rem;
-}
-// Normal margin bottom
-.m-b-n{
-  margin-bottom: 1.5rem;
-}
+// Paddings
+.small-padding {  padding: 0.5rem 1.5rem; }
+.normal-padding { padding: 1rem 2rem; }
+.large-padding {  padding: 1.5rem 2.5rem; }
 
-.m-t-n{
-  margin-top: 1.5rem;
-}
-
-.small-padding {
-  padding: 0.5rem 1.5rem;
-}
-
-.normal-padding {
-  padding: 1rem 2rem;
-}
-
-.large-padding {
-  padding: 1.5rem 2.5rem;
-}
-
-.center-vertical {
-  display: flex;
-  // justify-content: flex-start;
-  align-items: center;
-}
+.center-vertical { display: flex; align-items: center; /* justify-content: flex-start; */ }
 
 // Flexbox grid
 @import "flexboxgrid.less";

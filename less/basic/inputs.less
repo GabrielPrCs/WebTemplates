@@ -1,36 +1,38 @@
-.material-input-group {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.input-group {
+  // Position of the group
+  position: relative;
+  // Effects for all the childrens
+  > * { @effect: ease-in-out;  @attribute: border-bottom;  @time: .4s;  .add-transition(); }
 
-  > * {
-    .m-b-n;
-  }
-
-  > i {
-    padding-right: .5rem;
+  // Label Style. It has to be below the input.
+  > label {
+    position: absolute; left: 0; top: 0;
+    font-size: 75%; font-weight: bold;
+    color: @unique-color-alt;
   }
 
   > input {
-    background-color:rgba(0, 0, 0, 0);
-    font-size:18px;
-    padding:10px 10px 10px 5px;
-    display:block;
-    width:300px;
-    border:none;
-    border-bottom: 1px solid #757575;
-    @effect: ease-in-out;  @attribute: border-bottom;  @time: .4s;  .add-transition();
-    &:focus {
-      outline:none;
-      border-bottom: 2px solid @primary-color;
-      @effect: ease-in-out;  @attribute: border-bottom;  @time: .4s;  .add-transition();
-    }
-    &:hover{
-      cursor: pointer;
-    }
-    &.block {
-      width: 100%;
-    }
-  }
+    // Margins
+    .small-margin-top; .normal-margin-bottom;
+    // Text and Fonts
+    font-size: 102%;
+    // Borders and Outline
+    outline:none; border:none;
+    // Padding
+    .normal-padding; padding-left: 0px; padding-right: 0px;
 
+    // Label colors based on the input status
+    &:invalid ~ label { color: @unique-color-alt }
+    &:valid ~ label { color: @primary-color }
+
+    // Differents Colors
+    &.material-input {
+      &:invalid { border-bottom: 1px solid @unique-color-alt }
+      &:valid { border-bottom: 1px solid @primary-color }
+      background-color: white;
+    }
+
+    // Block input
+    &.block-input {  width: 100% }
+  }
 }
