@@ -16,7 +16,7 @@
     The Modal is a popup window which can be used for user notifications, UI enhancements, e-commerce components and many other cases.
 
     <h3>Layout</h3>
-    The modal should be placed outside of the <b>&ltdiv class="<span class="red-text">main-content</span>"></b> so that the blur effect on the background when the Modal is open works.
+    The modal should be placed outside of the <b>&ltdiv class="<span class="danger-text">main-content</span>"></b> so that the blur effect on the background when the Modal is open works.
     <pre>
       <code>
           &lt!DOCTYPE html>
@@ -26,11 +26,11 @@
             &lt/head>
             &ltbody>
 
-              &ltdiv class="<span class="red-text">main-content</span>">
+              &ltdiv class="<span class="danger-text">main-content</span>">
                 ...
               &lt/div>
 
-              &ltdiv class="<span class="red-text">modal</span>">
+              &ltdiv class="<span class="danger-text">modal</span>">
                 ...
               &lt/div>
 
@@ -47,7 +47,7 @@
     </ul>
 
     <h3>Themes</h3>
-    The only theme available (for now) is the <span class="blue-text">default</span> theme. However, the following sections explain how you can create new themes.
+    The only theme available (for now) is the <span class="primary-text">default</span> theme. However, the following sections explain how you can create new themes.
 
     <hr>
 
@@ -58,23 +58,23 @@
     </button>
     <pre>
       <code>
-        <span class="blue-text nowrap">
+        <span class="primary-text nowrap">
         &lt!-- The buttons that open / close the modal should have the class .full-modal-toggle-button and the data-target with the id of the modal to toggle -->
         </span>
-        &ltbutton type="button" name="button" class="<span class="red-text">full-modal-toggle-button</span>" data-target="<span class="red-text">#full-modal-example</span>">
+        &ltbutton type="button" name="button" class="<span class="danger-text">full-modal-toggle-button</span>" data-target="<span class="danger-text">#full-modal-example</span>">
           Open Full Modal
         &lt/button>
 
-        &ltdiv id="full-modal-example" class="<span class="red-text">full-modal default</span>">
-          &ltdiv class="<span class="red-text">modal-header</span>">
+        &ltdiv id="full-modal-example" class="<span class="danger-text">full-modal default</span>">
+          &ltdiv class="<span class="danger-text">modal-header</span>">
             &lth1>The Title!&lt/h1>
           &lt/div>
 
-          &ltdiv class="<span class="red-text">modal-body</span>">
+          &ltdiv class="<span class="danger-text">modal-body</span>">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             &ltbr>
-            &ltbutton type="button" name="button" class="<span class="red-text">button primary-button full-modal-toggle-button</span>" data-target="<span class="red-text">#full-modal-example</span>">
+            &ltbutton type="button" name="button" class="<span class="danger-text">button primary-button full-modal-toggle-button</span>" data-target="<span class="danger-text">#full-modal-example</span>">
             Close Full Modal
             &lt/button>
           &lt/div>
@@ -106,22 +106,22 @@
     </button>
     <pre>
       <code>
-        <span class="blue-text nowrap">
+        <span class="primary-text nowrap">
         &lt!-- The buttons that open / close the modal should have the class .bottom-modal-toggle-button and the data-target with the id of the modal to toggle -->
         </span>
-        &ltbutton type="button" name="button" class="<span class="red-text">bottom-modal-toggle-button</span>" data-target="<span class="red-text">#bottom-modal-example</span>">
+        &ltbutton type="button" name="button" class="<span class="danger-text">bottom-modal-toggle-button</span>" data-target="<span class="danger-text">#bottom-modal-example</span>">
           Open Bottom Modal
         &lt/button>
 
-        &ltdiv id="bottom-modal-example" class="<span class="red-text">bottom-modal default</span>">
+        &ltdiv id="bottom-modal-example" class="<span class="danger-text">bottom-modal default</span>">
 
-          &ltdiv class="<span class="red-text">modal-body</span>">
+          &ltdiv class="<span class="danger-text">modal-body</span>">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           &lt/div>
 
-          &ltdiv class="<span class="red-text">modal-footer</span>">
-            &ltbutton type="button" name="button" class="<span class="red-text">button primary-button bottom-modal-toggle-button</span>" data-target="<span class="red-text">#bottom-modal-example</span>">
+          &ltdiv class="<span class="danger-text">modal-footer</span>">
+            &ltbutton type="button" name="button" class="<span class="danger-text">button primary-button bottom-modal-toggle-button</span>" data-target="<span class="danger-text">#bottom-modal-example</span>">
               Close Bottom Modal
             &lt/button>
           &lt/div>

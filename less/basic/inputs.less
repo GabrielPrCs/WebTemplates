@@ -13,26 +13,31 @@
 
   > input {
     // Margins
-    .small-margin-top; .normal-margin-bottom;
+    .normal-margin-top; .normal-margin-bottom;
     // Text and Fonts
-    font-size: 102%;
+    font-size: 102%; color: black;
     // Borders and Outline
-    outline:none; border:none;
-    // Padding
-    .normal-padding; padding-left: 0px; padding-right: 0px;
+    outline:none; border:none; border: 1px;
+    // Background
+    background-color: white;
 
-    // Label colors based on the input status
-    &:invalid ~ label { color: @unique-color-alt }
-    &:valid ~ label { color: @primary-color }
+    // Styles based on the input status
+    &:invalid  { border-color: @unique-color; & ~ label  { color: @unique-color-alt } }
+    &:valid    { border-color: @primary-color; & ~ label { color: @primary-color    } }
+    &:disabled { border-color: @disabled-color; cursor: not-allowed; }
 
     // Differents Colors
+    &.basic-input {
+      .shadow-1;
+      border-style: solid; &:hover { .shadow-2; }
+      &:disabled { border-style: dotted; .no-shadow; &:hover { .no-shadow } }
+    }
     &.material-input {
-      &:invalid { border-bottom: 1px solid @unique-color-alt }
-      &:valid { border-bottom: 1px solid @primary-color }
-      background-color: white;
+      border-bottom-style: solid; &:disabled { border-bottom-style: dotted; }
     }
 
-    // Block input
-    &.block-input {  width: 100% }
+    // Differents sizes
+    .small-padding; padding-left: 10px; padding-right: 0px;
+    &.block-input {  width: calc(~'100% - 10px') }
   }
 }

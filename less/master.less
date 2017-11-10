@@ -15,10 +15,19 @@
 @unique-color:   #3F729B; @unique-color-alt:  #1C2331;
 @disabled-color: #78909C;
 
+// Text Colors
+.default-text { color: @default-color-alt }
+.primary-text { color: @primary-color-alt }
+.danger-text  { color: @danger-color-alt  }
+.warning-text { color: @warning-color-alt }
+.success-text { color: @success-color-alt }
+.info-text    { color: @info-color-alt    }
+.unique-text  { color: @unique-color-alt  }
+
 // Material design shadows
-.no-shadow { box-shadow: 0 3px 6px rgba(0,0,0,0), 0 3px 6px rgba(0,0,0,0); }
-.shadow-1 {  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); }
-.shadow-2 {  box-shadow: 0 3px 6px rgba(0,0,0,0.32), 0 3px 6px rgba(0,0,0,0.46); }
+.no-shadow { box-shadow: 0 3px 6px rgba(0,0,0,0.00), 0 3px 6px rgba(0,0,0,0.00); }
+.shadow-1  { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); }
+.shadow-2  { box-shadow: 0 3px 6px rgba(0,0,0,0.32), 0 3px 6px rgba(0,0,0,0.46); }
 
 .add-transition() {
   @transition: @attribute @time @effect;
@@ -40,49 +49,7 @@
 
 .opacity-effect {
   background-color: rgba(0,0,0,0.45);
-  > .main-content {
-    .blur;
-  }
-}
-
-body {
-  @effect: ease-in-out;  @attribute: background-color;  @time: .3s;  .add-transition();
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #ccc, #333, #ccc);
-  margin: 20px 0px;
-}
-
-pre {
-  padding: 15px 25px;
-  max-height: 55vh;
-  overflow: auto;
-  height: auto;
-  background-color: #eceff1;
-  .shadow-1;
-  border-radius: 2px;
-  &::before {
-    content: 'Example code\a';
-    white-space: pre;
-    font-weight: bold;
-    font-size: 115%;
-  }
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-
-.main-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90vw;
-  margin: 1vh 5vw;
+  > .main-content { .blur; }
 }
 
 // Margins
@@ -100,10 +67,57 @@ pre {
 
 .center-vertical { display: flex; align-items: center; /* justify-content: flex-start; */ }
 
+// Body General Styling
+body > * {
+  line-height: 130%;
+  font-family: 'Roboto Mono', monospace;
+  @effect: ease-in-out;  @attribute: background-color;  @time: .3s;  .add-transition();
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  margin: 1vh 5vw;
+}
+
+// Text Align
+.text-justify { text-align: justify; }
+.text-center  { text-align: center;  }
+.text-right   { text-align: right;   }
+.text-left    { text-align: left;    }
+
+
+
+hr {
+  .normal-margin-top; .normal-margin-bottom;
+  border: none; height: 1px;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+pre {
+  .normal-padding;
+  max-height: 50vh; height: auto;
+  overflow: auto;
+  background-color: #eceff1;
+  .shadow-1;
+  border-radius: 2px;
+  &::before {
+    content: 'Example code\a';
+    white-space: pre;
+    font-weight: bold;
+    font-size: 115%;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
 // Flexbox grid
 @import "flexboxgrid.less";
 // Basic components
-@import "basic/text.less";
 @import "basic/buttons.less";
 @import "basic/selects.less"; // TODO multiple selection
 @import "basic/tables.less";

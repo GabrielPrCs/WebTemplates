@@ -14,6 +14,30 @@
 
       <div class="row">
         <div class="col-xs-12">
+          <h2>Basic Input</h2>
+          <div class="input-group">
+            <input type="text" class="basic-input" placeholder="Placeholder" required>
+            <label>Basic Input</label>
+          </div>
+          <div class="input-group">
+            <input type="text" class="basic-input block-input" placeholder="Placeholder" required>
+            <label>Basic Block Input</label>
+          </div>
+          <div class="input-group">
+            <input type="text" class="basic-input block-input" placeholder="Placeholder" disabled>
+            <label>Basic Block Input Disabled</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
           <h2>Material Design Input</h2>
           <div class="input-group">
             <input type="email" class="material-input" placeholder="Placeholder" required>
@@ -25,15 +49,20 @@
             <label>Material Design Block Input</label>
           </div>
 
+          <div class="input-group">
+            <input class="block-input material-input" placeholder="Placeholder" disabled>
+            <label>Material Design Block Input Disabled</label>
+          </div>
+
           <pre>
             <code>
-              &ltdiv class="<span class="red-text">input-group</span>">
-                &ltinput class="<span class="red-text">material-input</span>" <span class="blue-text">required</span>>
+              &ltdiv class="<span class="danger-text">input-group</span>">
+                &ltinput class="<span class="danger-text">material-input</span>" <span class="primary-text">required</span>>
                 &ltlabel>Material Design Input&lt/label>
               &lt/div>
 
-              &ltdiv class="<span class="red-text">input-group</span>">
-                &ltinput class="<span class="red-text">material-input block-input</span>" <span class="blue-text">required</span>>
+              &ltdiv class="<span class="danger-text">input-group</span>">
+                &ltinput class="<span class="danger-text">material-input block-input</span>" <span class="primary-text">required</span>>
                 &ltlabel>Material Design Block Input&lt/label>
               &lt/div>
             </code>
@@ -42,16 +71,16 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 text-justify">
           <hr>
           <h2>Extra Explanations</h2>
           <ul>
             <li>
-              The label has to be <span class="blue-text">below</span> the input for a correct behavior. <br>
+              The label has to be <span class="primary-text">below</span> the input for a correct behavior. <br>
             </li>
             <li>
-              The <span class="blue-text">required</span> attribute makes the input color black <span class="red-text">(invalid input)</span> when it is empty.
-              Otherwise, if the input is not required, its color will be blue <span class="red-text">(valid input)</span>.
+              The <span class="primary-text">required</span> attribute makes the input color black <span class="danger-text">(invalid input)</span> when it is empty.
+              Otherwise, if the input is not required, its color will be blue <span class="danger-text">(valid input)</span>.
             </li>
           </ul>
         </div>

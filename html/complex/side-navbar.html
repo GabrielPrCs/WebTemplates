@@ -17,7 +17,7 @@
     Bar that appears from the left side of the screen, in which you can place "items" to use as navigation within the page.
 
     <h3>Layout</h3>
-    The side navigation bar should be placed after the <b>&ltdiv class="<span class="red-text">main-content</span>"></b> and be a direct child of the body tag so that the effects and functions works.
+    The side navigation bar should be placed after the <b>&ltdiv class="<span class="danger-text">main-content</span>"></b> and be a direct child of the body tag so that the effects and functions works.
     <pre>
       <code>
           &lt!DOCTYPE html>
@@ -27,11 +27,11 @@
             &lt/head>
             &ltbody>
 
-              &ltdiv class="<span class="red-text">main-content</span>">
+              &ltdiv class="<span class="danger-text">main-content</span>">
                 ...
               &lt/div>
 
-              &ltdiv class="<span class="red-text">side-navbar</span>">
+              &ltdiv class="<span class="danger-text">side-navbar</span>">
                 ...
               &lt/div>
 
@@ -48,10 +48,10 @@
     </ul>
 
     <h3>Themes</h3>
-    The only theme available (for now) is the <span class="blue-text">default</span> theme. However, the following sections explain how you can create new themes.
+    The only theme available (for now) is the <span class="primary-text">default</span> theme. However, the following sections explain how you can create new themes.
 
     <h3>Extra consideration</h3>
-    It is only possible to have a <b class="red-text">single</b> sidebar; if more than one is added, only the last one will be visible (the last will be the one that is below in the document).
+    It is only possible to have a <b class="danger-text">single</b> sidebar; if more than one is added, only the last one will be visible (the last will be the one that is below in the document).
 
     <hr>
 
@@ -66,26 +66,26 @@
         &lt!--  This example uses icons from <a href="http://fontawesome.io/icons/">fontawesome</a> -->
 
         &lt!-- The buttons that open / close the sidebar should have the class .sidebar-toggle-button -->
-        &ltbutton class="<span class="red-text">default-button side-navbar-toggle-button</span>">
+        &ltbutton class="<span class="danger-text">default-button side-navbar-toggle-button</span>">
           Toggle Side navbar
         &lt/button>
 
-        &ltdiv class="<span class="red-text">side-navbar default</span>">
+        &ltdiv class="<span class="danger-text">side-navbar default</span>">
 
-          &ltdiv class="<span class="red-text">side-navbar-header</span>">
+          &ltdiv class="<span class="danger-text">side-navbar-header</span>">
             &ltimg src="some_link">
           &lt/div>
 
-          &ltdiv class="<span class="red-text">side-navbar-body</span>">
+          &ltdiv class="<span class="danger-text">side-navbar-body</span>">
 
-            &ltul class="<span class="red-text">items</span>">
+            &ltul class="<span class="danger-text">items</span>">
 
-              &ltli class="<span class="red-text">item active</span>">
+              &ltli class="<span class="danger-text">item active</span>">
                 &lti class="fa fa-umbrella" aria-hidden="true">&lt/i>
                 This is an item with an icon at his left
               &lt/li>
 
-              &ltli class="<span class="red-text">item</span>">
+              &ltli class="<span class="danger-text">item</span>">
                 This is an item with an icon at his right
                 &lti class="fa fa-umbrella" aria-hidden="true">&lt/i>
               &lt/li>
@@ -107,7 +107,7 @@
     <b>Overlapping</b>: the sidebar will be placed over the content in main-content, instead of moving it to the left.
     <pre>
       <code>
-        &ltdiv class="side-navbar default <span class="red-text">overlapping</span>">
+        &ltdiv class="side-navbar default <span class="danger-text">overlapping</span>">
           ...
         &lt/div>
       </code>
@@ -124,7 +124,7 @@
 
           &ltdiv class="side-navbar-body">
 
-            &ltul class="items <span class="red-text">items-close-after-click</span>">
+            &ltul class="items <span class="danger-text">items-close-after-click</span>">
               ...
             &lt/ul>
 
@@ -147,7 +147,7 @@
 
             &ltul class="items">
 
-              &ltli class="item <span class="red-text">active</span>">
+              &ltli class="item <span class="danger-text">active</span>">
                 ...
               &lt/li>
 
