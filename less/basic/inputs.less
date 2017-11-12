@@ -1,6 +1,8 @@
 .input-group {
   // Position of the group
   position: relative;
+  // Width
+  width: 100%;
   // Effects for all the childrens
   > * { @effect: ease-in-out;  @attribute: border-bottom;  @time: .4s;  .add-transition(); }
 
@@ -19,7 +21,7 @@
     // Borders and Outline
     outline:none; border:none; border: 1px;
     // Background
-    background-color: white;
+    background-color: rgba(0,0,0,0);
 
     // Styles based on the input status
     &:invalid  { border-color: @unique-color; & ~ label  { color: @unique-color-alt } }

@@ -1006,7 +1006,7 @@ pre::before {
 }
 .select.material-select {
   color: black;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   border-bottom: 1px solid #757575;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
 }
@@ -1057,6 +1057,7 @@ pre::before {
 }
 .input-group {
   position: relative;
+  width: 100%;
 }
 .input-group > * {
   -webkit-transition: border-bottom 0.4s ease-in-out;
@@ -1081,7 +1082,7 @@ pre::before {
   outline: none;
   border: none;
   border: 1px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   padding: 0.5rem 1.5rem;
   padding-left: 10px;
   padding-right: 0px;
@@ -1103,8 +1104,11 @@ pre::before {
   cursor: not-allowed;
 }
 .input-group > input.basic-input {
-  border-style: solid;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-style: solid;
+}
+.input-group > input.basic-input:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
 .input-group > input.basic-input:disabled {
   border-style: dotted;
@@ -1112,9 +1116,6 @@ pre::before {
 }
 .input-group > input.basic-input:disabled:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
-}
-.input-group > input.basic-input:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
 .input-group > input.material-input {
   border-bottom-style: solid;
