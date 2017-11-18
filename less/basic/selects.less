@@ -10,6 +10,15 @@
   // Shadow
   .shadow-1; &:hover { .shadow-2; }
 
+  // Disabled Style
+  &:disabled {
+    background-color: white;
+    border-color: @disabled-color;
+    color: @disabled-color;
+    cursor: not-allowed;
+    &:hover { .shadow-1; }
+  }
+
   // Differents Colors
   &.default-select { background-color: @default-color; }
   &.unique-select {  background-color: @unique-color; }
@@ -25,16 +34,8 @@
     background-color: rgba(0,0,0,0);
     border-bottom: 1px solid #757575;
     .no-shadow;
-    &:disabled:hover { .no-shadow; }
-  }
-
-  // Disabled Style
-  &:disabled {
-    background-color: white;
-    border-color: @disabled-color;
-    color: @disabled-color;
-    cursor: not-allowed;
-    &:hover { .shadow-1; }
+    &:disabled { background-color: rgba(0,0,0,0); }
+    &:disabled:hover { .no-shadow; background-color: rgba(0,0,0,0); }
   }
 
   // Differents sizes

@@ -16,6 +16,6 @@ $(document).ready(function(){
   });
 });
 
-$(document).on('click','.tabs-link', function(){
+$('.tabs-link').on('click', function(){
   change_tab($(this));
 });

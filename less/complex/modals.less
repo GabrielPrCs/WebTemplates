@@ -1,94 +1,47 @@
-.full-modal {
-
-  @effect: ease-in-out;  @attribute: top;  @time: .3s;  .add-transition();
-
+.modal-general-styling() {
+  // Position
   position: fixed;
-  top: -200vh;
-  left: 5%;
-  width: 90%;
+  // Hidden on the page load
+  display: none;
+  // Shadow
+  .shadow-1;
+  // Basic Style
+  > * { .normal-padding; }
+  > .modal-body { overflow: auto; .text-justify; }
+}
 
-  .shadow-2;
+.full-modal {
+  // General modals styling
+  .modal-general-styling();
+  // Size and position
+  left: 2.5vw; top:2.5vh; width: 95vw;
 
+  // Basic Style Extentions
   > .modal-header {
-    max-height: 10vh;
-    height: auto;
-    padding: .4rem 1.5rem;
-    overflow: auto;
-  }
+    max-height: 10vh; height: auto; overflow: auto; }
+  > .modal-body { min-height: 70vh; max-height: 70vh; }
 
-  > .modal-body {
-    overflow: auto;
-    padding: .75rem 1.5rem;
-    min-height: 70vh;
-    max-height: 70vh;
-    text-align: justify;
-  }
-
-  &.is-open {
-    top: 5vh;
-  }
-
+  // Differents Colors
   &.default {
-    > * {
-      color: white;
-    }
-
-    > .modal-header {
-      background-color: @unique-color-alt;
-    }
-
-    > .modal-body {
-      color: black;
-      background-color: white;
-    }
+    > * { color: white; }
+    > .modal-header { background-color: @unique-color-alt; }
+    > .modal-body { color: black; background-color: white; }
   }
-
 }
 
 .bottom-modal {
+  // General modals styling
+  .modal-general-styling();
+  // Size and position
+  left: 0; bottom: 0; width: 100vw;
 
-  @effect: ease-in-out;  @attribute: bottom;  @time: .3s;  .add-transition();
+  // Basic Style Extentions
+  > .modal-body { height: 35vh; }
+  > .modal-footer { height: 10vh; font-weight: bold; }
 
-  position: fixed;
-  bottom: -200vh;
-  left: 0;
-  width: 100%;
-
-  > .modal-body {
-    padding: 3.5%;
-    text-align: justify;
-    height: 35vh;
-  }
-
-  > .modal-footer {
-    height: 10vh;
-    font-weight: bold;
-    padding: 1.5% 3.5%;
-  }
-
-  &.is-open {
-    bottom: 0px;
-
-    > * {
-      overflow: auto;
-    }
-
-  }
-
+  // Differents Colors
   &.default {
-    > .modal-body {
-      color: black;
-      background-color: white;
-    }
-
-    > .modal-footer {
-      color: white;
-      background-color: @unique-color-alt;
-    }
+    > .modal-body { color: black; background-color: white; }
+    > .modal-footer { color: white; background-color: @unique-color-alt; }
   }
-
-}
-
-.full-modal-open, .bottom-modal-open {
-  .opacity-effect;
 }

@@ -1,15 +1,19 @@
 .notifications-panel {
-  .opacity-effect;
-  position: fixed;
-  top: 0;
+
+  background-color: rgba(0,0,0,.5);
+  // Position
+  position: fixed; right: 0; top: 0;
+  // Hidden on the page load
+  display: none;
+  // Size
+  width: auto; min-height: 100vh; max-height: 100vh;
+  // Padding
   .small-padding;
-  right: -100vw;
-  width: auto;
-  min-height: 100vh;
-  max-height: 100vh;
-  overflow: auto;
-  @effect: ease-in-out;  @attribute: all;  @time: .3s;  .add-transition();
+  // Scrollbar
+  overflow: auto; .custom-scrollbar;
+
   >.notification {
+    .not-selectable;
     min-width: 20vw;
     width: auto;
     height: auto;
@@ -27,28 +31,17 @@
       padding-top: 1rem;
       text-align: justify;
     }
-    &:hover {
-      .shadow-2;
-      cursor: pointer;
-    }
-    &.notification-default {
-      background-color: @default-color;
-    }
-    &.notification-primary {
-      background-color: @primary-color;
-    }
-    &.notification-danger {
-      background-color: @danger-color;
-    }
-    &.notification-success {
-      background-color: @success-color;
-    }
-    &.notification-info {
-      background-color: @info-color;
-    }
-    &.notification-warning {
-      background-color: @warning-color;
-    }
+
+    // On notification hover
+    &:hover { .shadow-2; cursor: pointer; }
+
+    // Differents Colors
+    &.notification-default { background-color: @default-color; }
+    &.notification-primary { background-color: @primary-color; }
+    &.notification-danger  { background-color: @danger-color;  }
+    &.notification-success { background-color: @success-color; }
+    &.notification-info    { background-color: @info-color;    }
+    &.notification-warning { background-color: @warning-color; }
   }
 
 }
